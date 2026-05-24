@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "question": "If 2x + 5 = 15, what is the value of x?",
+    "options": ["2", "5", "10", "15"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "To solve for x: 2x + 5 = 15. Subtract 5 from both sides: 2x = 10. Divide both sides by 2: x = 5."
+  },
+  {
+    "id": 2,
+    "question": "What is 15% of 200?",
+    "options": ["25", "30", "35", "40"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "15% of 200 = (15/100) × 200 = 0.15 × 200 = 30."
+  },
+  {
+    "id": 3,
+    "question": "What is the next number in the sequence: 2, 4, 8, 16, ?",
+    "options": ["20", "24", "32", "64"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "Each number is double the previous: 2×2=4, 4×2=8, 8×2=16, 16×2=32."
+  },
+  {
+    "id": 4,
+    "question": "If a train travels 120 km in 2 hours, what is its average speed?",
+    "options": ["40 km/h", "50 km/h", "60 km/h", "70 km/h"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "Average speed = Distance ÷ Time = 120 km ÷ 2 hours = 60 km/h."
+  },
+  {
+    "id": 5,
+    "question": "What is the value of 7² - 3²?",
+    "options": ["16", "28", "40", "49"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "7² = 49, 3² = 9. Therefore, 49 - 9 = 40."
+  },
+  {
+    "id": 6,
+    "question": "If 3x - 7 = 11, what is x?",
+    "options": ["4", "5", "6", "7"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "3x - 7 = 11. Add 7 to both sides: 3x = 18. Divide by 3: x = 6."
+  },
+  {
+    "id": 7,
+    "question": "A shop offers a 20% discount on a $50 item. What is the final price?",
+    "options": ["$30", "$35", "$40", "$45"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "20% of $50 = $10. Final price = $50 - $10 = $40."
+  },
+  {
+    "id": 8,
+    "question": "What is the least common multiple (LCM) of 12 and 18?",
+    "options": ["24", "36", "48", "72"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Multiples of 12: 12, 24, 36, 48... Multiples of 18: 18, 36, 54... The smallest common multiple is 36."
+  },
+  {
+    "id": 9,
+    "question": "If the ratio of boys to girls in a class is 3:2 and there are 15 boys, how many girls are there?",
+    "options": ["8", "10", "12", "15"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Boys:Girls = 3:2. If 3 parts = 15 boys, then 1 part = 5. Therefore, 2 parts = 10 girls."
+  },
+  {
+    "id": 10,
+    "question": "What is 0.125 expressed as a fraction in simplest form?",
+    "options": ["1/4", "1/6", "1/8", "1/10"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "0.125 = 125/1000. Simplifying by dividing both by 125: 1/8."
+  },
+  {
+    "id": 11,
+    "question": "A number increased by 25% becomes 75. What was the original number?",
+    "options": ["50", "55", "60", "65"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Let original number be x. x + 0.25x = 75, so 1.25x = 75. Therefore x = 60."
+  },
+  {
+    "id": 12,
+    "question": "What is the area of a rectangle with length 12 cm and width 8 cm?",
+    "options": ["48 cm²", "72 cm²", "96 cm²", "120 cm²"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "Area of rectangle = length × width = 12 × 8 = 96 cm²."
+  },
+  {
+    "id": 13,
+    "question": "If a car uses 8 liters of fuel to travel 100 km, how many liters are needed for 350 km?",
+    "options": ["24 L", "26 L", "28 L", "30 L"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Fuel per km = 8/100 = 0.08 L/km. For 350 km: 350 × 0.08 = 28 liters."
+  },
+  {
+    "id": 14,
+    "question": "What is the value of (3/4) ÷ (2/5)?",
+    "options": ["1 1/8", "1 3/8", "1 7/8", "2 1/8"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "(3/4) ÷ (2/5) = (3/4) × (5/2) = 15/8 = 1 7/8."
+  },
+  {
+    "id": 15,
+    "question": "If 40% of a number is 80, what is 65% of that number?",
+    "options": ["120", "130", "140", "150"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "If 40% = 80, then 100% = 200. Therefore 65% of 200 = 130."
+  },
+  {
+    "id": 16,
+    "question": "What is the greatest common divisor (GCD) of 48 and 72?",
+    "options": ["12", "18", "24", "36"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Factors of 48: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48. Factors of 72: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72. Greatest common is 24."
+  },
+  {
+    "id": 17,
+    "question": "A product costs $120 after a 40% markup. What was the original cost?",
+    "options": ["$72", "$80", "$85.71", "$90"],
+    "correctAnswer": 2,
+    "difficulty": "hard",
+    "explanation": "If markup is 40%, selling price = 1.4 × cost. So cost = 120/1.4 = $85.71."
+  },
+  {
+    "id": 18,
+    "question": "What is the value of √(144 + 25)?",
+    "options": ["11", "12", "13", "14"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "√(144 + 25) = √169 = 13."
+  },
+  {
+    "id": 19,
+    "question": "If x + y = 10 and x - y = 4, what is the value of x?",
+    "options": ["5", "6", "7", "8"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Adding both equations: 2x = 14, so x = 7."
+  },
+  {
+    "id": 20,
+    "question": "What is 2⁵ × 2³?",
+    "options": ["2⁸", "2¹⁵", "4⁸", "8⁸"],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "explanation": "When multiplying powers with the same base, add exponents: 2⁵ × 2³ = 2⁸ = 256."
+  },
+  {
+    "id": 21,
+    "question": "A rectangle has perimeter 40 cm and length 12 cm. What is its width?",
+    "options": ["6 cm", "8 cm", "10 cm", "14 cm"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Perimeter = 2(l + w). So 40 = 2(12 + w), thus 20 = 12 + w, w = 8 cm."
+  },
+  {
+    "id": 22,
+    "question": "If 5 workers can complete a job in 12 days, how many days will 3 workers take?",
+    "options": ["15 days", "18 days", "20 days", "24 days"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Total work = 5 × 12 = 60 worker-days. For 3 workers: 60/3 = 20 days."
+  },
+  {
+    "id": 23,
+    "question": "What is the average of 15, 25, 35, and 45?",
+    "options": ["25", "28", "30", "32"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "Average = (15 + 25 + 35 + 45) / 4 = 120 / 4 = 30."
+  },
+  {
+    "id": 24,
+    "question": "If a cube has a volume of 64 cm³, what is the length of one edge?",
+    "options": ["2 cm", "4 cm", "6 cm", "8 cm"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Volume of cube = edge³. So edge³ = 64, therefore edge = ∛64 = 4 cm."
+  },
+  {
+    "id": 25,
+    "question": "What is 7/12 + 5/12?",
+    "options": ["11/24", "1", "12/12", "13/12"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "7/12 + 5/12 = 12/12 = 1."
+  },
+  {
+    "id": 26,
+    "question": "If a number is multiplied by 6 and then 15 is subtracted, the result is 45. What is the number?",
+    "options": ["8", "9", "10", "12"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Let number be x. 6x - 15 = 45, so 6x = 60, x = 10."
+  },
+  {
+    "id": 27,
+    "question": "What is 30% of 150 plus 20% of 150?",
+    "options": ["60", "65", "70", "75"],
+    "correctAnswer": 3,
+    "difficulty": "medium",
+    "explanation": "30% of 150 = 45, 20% of 150 = 30. Total = 45 + 30 = 75."
+  },
+  {
+    "id": 28,
+    "question": "If the sum of three consecutive integers is 48, what is the largest integer?",
+    "options": ["15", "16", "17", "18"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Let integers be x, x+1, x+2. x + (x+1) + (x+2) = 48, so 3x + 3 = 48, x = 15. Largest = 17."
+  },
+  {
+    "id": 29,
+    "question": "What is the circumference of a circle with radius 7 cm? (Use π ≈ 22/7)",
+    "options": ["22 cm", "35 cm", "44 cm", "49 cm"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Circumference = 2πr = 2 × (22/7) × 7 = 44 cm."
+  },
+  {
+    "id": 30,
+    "question": "If a = 3 and b = 4, what is a² + b² - 2ab?",
+    "options": ["0", "1", "5", "7"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "a² + b² - 2ab = 9 + 16 - 24 = 1. (This is (a-b)² = (3-4)² = 1)"
+  },
+  {
+    "id": 31,
+    "question": "A pipe can fill a tank in 6 hours. What fraction of the tank does it fill in 1 hour?",
+    "options": ["1/3", "1/4", "1/5", "1/6"],
+    "correctAnswer": 3,
+    "difficulty": "easy",
+    "explanation": "If the entire tank takes 6 hours, then in 1 hour it fills 1/6 of the tank."
+  },
+  {
+    "id": 32,
+    "question": "What is the value of (5² - 3²) / 4?",
+    "options": ["2", "3", "4", "5"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "(25 - 9) / 4 = 16 / 4 = 4."
+  },
+  {
+    "id": 33,
+    "question": "If 8 pens cost $12, what is the cost of 20 pens?",
+    "options": ["$25", "$28", "$30", "$32"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "Cost per pen = 12/8 = $1.50. For 20 pens: 20 × $1.50 = $30."
+  },
+  {
+    "id": 34,
+    "question": "What is 45 divided by 0.9?",
+    "options": ["40", "45", "50", "55"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "45 ÷ 0.9 = 45 ÷ (9/10) = 45 × (10/9) = 50."
+  },
+  {
+    "id": 35,
+    "question": "If the perimeter of a square is 48 cm, what is its area?",
+    "options": ["121 cm²", "144 cm²", "169 cm²", "196 cm²"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Side = 48/4 = 12 cm. Area = 12² = 144 cm²."
+  },
+  {
+    "id": 36,
+    "question": "What is the value of 3! (3 factorial)?",
+    "options": ["3", "6", "9", "12"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "3! = 3 × 2 × 1 = 6."
+  },
+  {
+    "id": 37,
+    "question": "If a number is divided by 7, the remainder is 3. What is the remainder when the same number is divided by 14?",
+    "options": ["3", "3 or 10", "7", "10"],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "explanation": "Numbers with remainder 3 when divided by 7: 3, 10, 17, 24... When divided by 14, these give remainders 3 or 10 alternately."
+  },
+  {
+    "id": 38,
+    "question": "What is 120% of 50?",
+    "options": ["50", "55", "60", "65"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "120% of 50 = 1.2 × 50 = 60."
+  },
+  {
+    "id": 39,
+    "question": "If x/5 + 3 = 7, what is x?",
+    "options": ["10", "15", "20", "25"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "x/5 + 3 = 7, so x/5 = 4, therefore x = 20."
+  },
+  {
+    "id": 40,
+    "question": "What is the median of 7, 3, 9, 1, 5?",
+    "options": ["3", "5", "6", "7"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Arranged in order: 1, 3, 5, 7, 9. The middle value (median) is 5."
+  },
+  {
+    "id": 41,
+    "question": "If a² - b² = 24 and a + b = 6, what is a - b?",
+    "options": ["2", "3", "4", "6"],
+    "correctAnswer": 2,
+    "difficulty": "hard",
+    "explanation": "a² - b² = (a+b)(a-b). So 24 = 6(a-b), therefore a-b = 4."
+  },
+  {
+    "id": 42,
+    "question": "What is 5/8 expressed as a percentage?",
+    "options": ["60%", "62.5%", "65%", "67.5%"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "5/8 = 0.625 = 62.5%."
+  },
+  {
+    "id": 43,
+    "question": "If the price of an item increases from $80 to $100, what is the percentage increase?",
+    "options": ["20%", "22%", "25%", "30%"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Increase = 20. Percentage = (20/80) × 100 = 25%."
+  },
+  {
+    "id": 44,
+    "question": "What is the sum of angles in a triangle?",
+    "options": ["90°", "120°", "150°", "180°"],
+    "correctAnswer": 3,
+    "difficulty": "easy",
+    "explanation": "The sum of all interior angles in a triangle is always 180°."
+  },
+  {
+    "id": 45,
+    "question": "If 3ˣ = 81, what is x?",
+    "options": ["2", "3", "4", "5"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "3¹ = 3, 3² = 9, 3³ = 27, 3⁴ = 81. Therefore x = 4."
+  },
+  {
+    "id": 46,
+    "question": "What is the simple interest on $1000 at 5% per annum for 2 years?",
+    "options": ["$50", "$75", "$100", "$150"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Simple Interest = (P × R × T)/100 = (1000 × 5 × 2)/100 = $100."
+  },
+  {
+    "id": 47,
+    "question": "If 12 chocolates cost $15, how many chocolates can you buy with $25?",
+    "options": ["18", "19", "20", "21"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Chocolates per dollar = 12/15 = 0.8. With $25: 25 × 0.8 = 20 chocolates."
+  },
+  {
+    "id": 48,
+    "question": "What is the value of |(-7)|?",
+    "options": ["-7", "0", "7", "14"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "Absolute value of -7 is 7. The absolute value is always non-negative."
+  },
+  {
+    "id": 49,
+    "question": "If a clock shows 3:15, what is the angle between the hour and minute hands?",
+    "options": ["0°", "7.5°", "15°", "22.5°"],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "explanation": "Minute hand at 15 min = 90° from 12. Hour hand at 3:15 = 90° + 7.5° = 97.5° from 12. Angle = 97.5° - 90° = 7.5°."
+  },
+  {
+    "id": 50,
+    "question": "What is 0.75 + 0.25 - 0.5?",
+    "options": ["0.25", "0.5", "0.75", "1.0"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "0.75 + 0.25 = 1.0. Then 1.0 - 0.5 = 0.5."
+  }
+]

@@ -1,0 +1,55 @@
+<svg
+    width="340"
+    height="210"
+    viewBox="0 0 340 210"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <!-- Speech Bubble -->
+    <g transform="translate(95,20)">
+        <rect
+            x="0"
+            y="0"
+            rx="22"
+            ry="22"
+            width="120"
+            height="100"
+            fill="hsl(221.2 83.2% 53.3%)"
+        />
+        <!-- Bubble Tail -->
+        <polygon
+            points="52,100 68,100 60,120"
+            fill="hsl(221.2 83.2% 53.3%)"
+        />
+
+        <!-- Spark -->
+        <g transform="translate(12,30)" fill="#FFFFFF">
+            <path d="M10 0 L14 10 L24 14 L14 18 L10 28 L6 18 L-4 14 L6 10 Z" />
+            <path d="M32 8 L34 12 L38 14 L34 16 L32 20 L30 16 L26 14 L30 12 Z" />
+        </g>
+    </g>
+
+    <!-- Brand Name -->
+    <text
+        x="170"
+        y="180"
+        text-anchor="middle"
+        font-size="48"
+        font-family="Inter, Poppins, Arial, sans-serif"
+        font-weight="600"
+    >
+        <tspan fill="hsl(221.2 83.2% 53.3%)">Speak</tspan>
+        <tspan fill="#9CA3AF">Up</tspan>
+    </text>
+
+    <!-- Tagline -->
+    <text
+        x="170"
+        y="205"
+        text-anchor="middle"
+        font-size="16"
+        font-family="Inter, Poppins, Arial, sans-serif"
+        fill="#9CA3AF"
+    >
+        Communication-First
+    </text>
+</svg>

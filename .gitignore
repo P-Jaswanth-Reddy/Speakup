@@ -1,0 +1,152 @@
+# ============================================
+# DOCUMENTATION & SCREENSHOTS
+# ============================================
+docs/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+
+# ============================================
+# PYTHON BACKEND
+# ============================================
+# Virtual environments
+backend/venv/
+backend/env/
+backend/.venv/
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.Python
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+*.env
+.envrc
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# ============================================
+# FRONTEND
+# ============================================
+# Node modules
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+frontend/dist/
+frontend/build/
+.next/
+out/
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# JetBrains
+.idea/
+*.iml
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# OPERATING SYSTEM
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# ============================================
+# LOGS & TEMPORARY FILES
+# ============================================
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+
+# ============================================
+# API KEYS & CREDENTIALS
+# ============================================
+# Azure & Cloud credentials
+*.pem
+*.key
+credentials.json
+secrets.json
+config.json
+
+# ============================================
+# DATABASE
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================
+# MISC
+# ============================================
+.cache/
+.temp/
+.tmp/
+
+backend/firebase-service-account.json
+
+# Archived backend versions
+backend-gemini/
+# Project documentation files
+QUESTION_BANK_GUIDE.md
+PROJECT_FULL_DOC.md
+PROJECT_FULL_DOC.pdf

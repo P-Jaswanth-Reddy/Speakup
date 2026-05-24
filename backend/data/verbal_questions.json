@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "question": "Choose the word that is most similar in meaning to 'Eloquent':",
+    "options": ["Silent", "Articulate", "Confused", "Hesitant"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Eloquent means fluent or persuasive in speaking or writing. Articulate has the same meaning - expressing oneself clearly and effectively."
+  },
+  {
+    "id": 2,
+    "question": "Choose the correctly spelled word:",
+    "options": ["Accomodate", "Accommodate", "Acomodate", "Acommodate"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "The correct spelling is 'Accommodate' with two 'c's and two 'm's."
+  },
+  {
+    "id": 3,
+    "question": "Select the word that is opposite in meaning to 'Generous':",
+    "options": ["Kind", "Stingy", "Wealthy", "Giving"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Generous means giving freely, while stingy means unwilling to give or spend - they are opposites."
+  },
+  {
+    "id": 4,
+    "question": "Choose the word that best completes: 'The evidence was _____ and could not be used in court.'",
+    "options": ["inadmissible", "admissible", "credible", "visible"],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "explanation": "Inadmissible means not allowed or acceptable, especially in a court of law."
+  },
+  {
+    "id": 5,
+    "question": "Identify the grammatically correct sentence:",
+    "options": ["He don't know the answer", "He doesn't knows the answer", "He doesn't know the answer", "He don't knows the answer"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "'He doesn't know the answer' is correct. Use 'doesn't' (does not) with third person singular, and the base form of the verb."
+  },
+  {
+    "id": 6,
+    "question": "Choose the synonym for 'Abundant':",
+    "options": ["Scarce", "Plentiful", "Rare", "Limited"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Abundant and plentiful both mean existing in large quantities."
+  },
+  {
+    "id": 7,
+    "question": "Select the antonym of 'Ancient':",
+    "options": ["Old", "Modern", "Historical", "Traditional"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Ancient means very old, while modern means contemporary or recent - they are opposites."
+  },
+  {
+    "id": 8,
+    "question": "Fill in the blank: 'She has been working here _____ five years.'",
+    "options": ["since", "for", "from", "during"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "'For' is used with a period of time (five years). 'Since' is used with a specific point in time."
+  },
+  {
+    "id": 9,
+    "question": "Choose the word closest in meaning to 'Meticulous':",
+    "options": ["Careless", "Careful", "Quick", "Messy"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Meticulous means showing great attention to detail, very careful and precise."
+  },
+  {
+    "id": 10,
+    "question": "Identify the type of sentence: 'What a beautiful day!'",
+    "options": ["Declarative", "Interrogative", "Imperative", "Exclamatory"],
+    "correctAnswer": 3,
+    "difficulty": "easy",
+    "explanation": "An exclamatory sentence expresses strong emotion and ends with an exclamation mark."
+  },
+  {
+    "id": 11,
+    "question": "Choose the correctly punctuated sentence:",
+    "options": ["Its a beautiful day", "Its' a beautiful day", "It's a beautiful day", "Its a beautiful day!"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "'It's' is the contraction of 'it is'. 'Its' (without apostrophe) is possessive."
+  },
+  {
+    "id": 12,
+    "question": "Select the synonym for 'Candid':",
+    "options": ["Dishonest", "Frank", "Secretive", "Shy"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Candid and frank both mean truthful and straightforward, not hiding one's opinions."
+  },
+  {
+    "id": 13,
+    "question": "Fill in the blank: 'Neither John _____ Mary was present.'",
+    "options": ["or", "nor", "and", "but"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "'Neither...nor' is the correct correlative conjunction pair."
+  },
+  {
+    "id": 14,
+    "question": "Choose the word opposite in meaning to 'Expand':",
+    "options": ["Grow", "Contract", "Increase", "Enlarge"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Expand means to become larger, while contract means to become smaller."
+  },
+  {
+    "id": 15,
+    "question": "Identify the part of speech of the underlined word: 'She sings beautifully.'",
+    "options": ["Noun", "Verb", "Adverb", "Adjective"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "'Beautifully' is an adverb as it describes how she sings (modifies the verb)."
+  },
+  {
+    "id": 16,
+    "question": "Choose the synonym for 'Diligent':",
+    "options": ["Lazy", "Hardworking", "Careless", "Slow"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Diligent and hardworking both mean showing care and effort in one's work."
+  },
+  {
+    "id": 17,
+    "question": "Select the correctly spelled word:",
+    "options": ["Definitely", "Definately", "Definetly", "Definitly"],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "explanation": "The correct spelling is 'Definitely' with 'finite' in the middle."
+  },
+  {
+    "id": 18,
+    "question": "Fill in the blank: 'If I _____ you, I would accept the offer.'",
+    "options": ["am", "was", "were", "be"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "In conditional sentences (hypothetical), use 'were' for all persons: 'If I were you...'"
+  },
+  {
+    "id": 19,
+    "question": "Choose the antonym of 'Courage':",
+    "options": ["Bravery", "Cowardice", "Strength", "Valor"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Courage means bravery, while cowardice means lack of courage - they are opposites."
+  },
+  {
+    "id": 20,
+    "question": "Identify the figure of speech: 'The classroom was a zoo.'",
+    "options": ["Simile", "Metaphor", "Personification", "Hyperbole"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "This is a metaphor - directly comparing the classroom to a zoo without using 'like' or 'as'."
+  },
+  {
+    "id": 21,
+    "question": "Choose the word closest in meaning to 'Benevolent':",
+    "options": ["Kind", "Cruel", "Harsh", "Mean"],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "explanation": "Benevolent means well-meaning and kindly."
+  },
+  {
+    "id": 22,
+    "question": "Select the grammatically correct sentence:",
+    "options": ["Between you and I", "Between you and me", "Between you and myself", "Between yourself and I"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "'Between you and me' is correct. After prepositions, use object pronouns (me, not I)."
+  },
+  {
+    "id": 23,
+    "question": "Fill in the blank: 'She is good _____ mathematics.'",
+    "options": ["in", "at", "on", "with"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "'Good at' is the correct preposition to use with skills or subjects."
+  },
+  {
+    "id": 24,
+    "question": "Choose the synonym for 'Transient':",
+    "options": ["Permanent", "Temporary", "Lasting", "Eternal"],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "explanation": "Transient and temporary both mean lasting for only a short time."
+  },
+  {
+    "id": 25,
+    "question": "Identify the error: 'Each of the students have submitted their assignment.'",
+    "options": ["Each", "have", "their", "No error"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "'Each' is singular, so it should be 'has submitted', not 'have submitted'."
+  },
+  {
+    "id": 26,
+    "question": "Choose the antonym of 'Opaque':",
+    "options": ["Clear", "Dark", "Cloudy", "Murky"],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "explanation": "Opaque means not see-through, while clear (or transparent) means see-through."
+  },
+  {
+    "id": 27,
+    "question": "Select the word that best completes: 'His _____ was evident from his confident manner.'",
+    "options": ["arrogance", "humility", "shyness", "nervousness"],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "explanation": "Arrogance (excessive confidence) fits with 'confident manner', though overconfident would be more precise."
+  },
+  {
+    "id": 28,
+    "question": "Choose the correctly spelled word:",
+    "options": ["Occurance", "Occurrence", "Ocurrence", "Occurrance"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "The correct spelling is 'Occurrence' with two 'c's and two 'r's."
+  },
+  {
+    "id": 29,
+    "question": "Fill in the blank: 'The meeting has been postponed _____ next week.'",
+    "options": ["until", "since", "for", "from"],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "explanation": "'Postponed until' indicates the new time when something will happen."
+  },
+  {
+    "id": 30,
+    "question": "Choose the synonym for 'Ambiguous':",
+    "options": ["Clear", "Vague", "Definite", "Precise"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Ambiguous and vague both mean unclear or open to multiple interpretations."
+  },
+  {
+    "id": 31,
+    "question": "Identify the passive voice sentence:",
+    "options": ["She wrote a letter", "A letter was written by her", "She is writing a letter", "She will write a letter"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Passive voice emphasizes the action rather than the doer: 'A letter was written by her'."
+  },
+  {
+    "id": 32,
+    "question": "Choose the antonym of 'Conceal':",
+    "options": ["Hide", "Reveal", "Cover", "Mask"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Conceal means to hide, while reveal means to show or make known."
+  },
+  {
+    "id": 33,
+    "question": "Select the correct form: 'One of the boys _____ absent.'",
+    "options": ["are", "is", "were", "be"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "'One' is singular, so it takes 'is'. Don't be confused by 'boys' which is plural."
+  },
+  {
+    "id": 34,
+    "question": "Choose the word closest in meaning to 'Pragmatic':",
+    "options": ["Idealistic", "Practical", "Theoretical", "Imaginative"],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "explanation": "Pragmatic means dealing with things sensibly and realistically, i.e., practical."
+  },
+  {
+    "id": 35,
+    "question": "Fill in the blank: 'He is senior _____ me in the company.'",
+    "options": ["than", "to", "from", "with"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "'Senior to' and 'junior to' are the correct forms, not 'senior than'."
+  },
+  {
+    "id": 36,
+    "question": "Choose the synonym for 'Perilous':",
+    "options": ["Safe", "Dangerous", "Secure", "Protected"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Perilous and dangerous both mean full of risk or danger."
+  },
+  {
+    "id": 37,
+    "question": "Identify the correctly punctuated sentence:",
+    "options": ["The book which I bought is interesting", "The book, which I bought is interesting", "The book which I bought, is interesting", "The book, which I bought, is interesting"],
+    "correctAnswer": 3,
+    "difficulty": "hard",
+    "explanation": "Non-restrictive clauses (additional information) are set off with commas: 'The book, which I bought, is interesting'."
+  },
+  {
+    "id": 38,
+    "question": "Choose the antonym of 'Ascend':",
+    "options": ["Rise", "Climb", "Descend", "Elevate"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "explanation": "Ascend means to go up, while descend means to go down."
+  },
+  {
+    "id": 39,
+    "question": "Select the word that best completes: 'Despite his lack of experience, he performed _____.'",
+    "options": ["poorly", "badly", "admirably", "terribly"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "'Despite' suggests contrast - despite lacking experience, he still did well (admirably)."
+  },
+  {
+    "id": 40,
+    "question": "Choose the correctly spelled word:",
+    "options": ["Manoeuvre", "Maneuver", "Manuver", "Manouvre"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "In American English, 'Maneuver' is correct. British English uses 'Manoeuvre'."
+  },
+  {
+    "id": 41,
+    "question": "Fill in the blank: 'The children are playing _____ the garden.'",
+    "options": ["in", "on", "at", "into"],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "explanation": "'In the garden' is correct for being inside an enclosed or defined space."
+  },
+  {
+    "id": 42,
+    "question": "Choose the synonym for 'Novice':",
+    "options": ["Expert", "Beginner", "Professional", "Master"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Novice and beginner both mean someone new to a particular activity."
+  },
+  {
+    "id": 43,
+    "question": "Identify the sentence with correct subject-verb agreement:",
+    "options": ["The team are playing well", "The team is playing well", "The teams is playing well", "The team be playing well"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "'Team' is a collective noun treated as singular in American English: 'The team is playing well'."
+  },
+  {
+    "id": 44,
+    "question": "Choose the antonym of 'Verbose':",
+    "options": ["Wordy", "Concise", "Lengthy", "Talkative"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "explanation": "Verbose means using more words than necessary, while concise means brief and to the point."
+  },
+  {
+    "id": 45,
+    "question": "Select the word that best fits: 'Her _____ attitude won her many friends.'",
+    "options": ["hostile", "friendly", "aggressive", "rude"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "A friendly attitude would help win friends, while hostile/aggressive/rude would not."
+  },
+  {
+    "id": 46,
+    "question": "Choose the synonym for 'Ephemeral':",
+    "options": ["Lasting", "Brief", "Permanent", "Eternal"],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "explanation": "Ephemeral means lasting for a very short time, brief and transient."
+  },
+  {
+    "id": 47,
+    "question": "Fill in the blank: 'I prefer coffee _____ tea.'",
+    "options": ["than", "to", "over", "from"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "'Prefer...to' is the correct construction: 'prefer A to B'."
+  },
+  {
+    "id": 48,
+    "question": "Choose the correctly punctuated sentence:",
+    "options": ["Let's eat grandma", "Lets eat grandma", "Let's eat, grandma", "Lets' eat grandma"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "'Let's eat, grandma' (with comma) means inviting grandma to eat. Without comma, it has a very different meaning!"
+  },
+  {
+    "id": 49,
+    "question": "Choose the antonym of 'Optimistic':",
+    "options": ["Hopeful", "Pessimistic", "Positive", "Cheerful"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "explanation": "Optimistic means hopeful, while pessimistic means expecting the worst."
+  },
+  {
+    "id": 50,
+    "question": "Identify the figure of speech: 'The wind whispered through the trees.'",
+    "options": ["Simile", "Metaphor", "Personification", "Alliteration"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "explanation": "Personification gives human qualities (whispering) to non-human things (wind)."
+  }
+]

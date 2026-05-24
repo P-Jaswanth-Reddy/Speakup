@@ -1,0 +1,1751 @@
+[
+  {
+    "topic": "Arrays",
+    "difficulty": "easy",
+    "title": "Array of Doubles",
+    "description": "Given an array of integers, return a new array with each integer doubled. The input array is not modified. The function should take an array of integers as input and return a new array of doubles. This is the main function to be implemented.",
+    "examples": [
+      {
+        "input": "[1, 2, 3]",
+        "output": "[2.0, 4.0, 6.0]",
+        "explanation": "Each integer in the input array is doubled."
+      },
+      {
+        "input": "[-1, 0, 1]",
+        "output": "[-2.0, 0.0, 2.0]",
+        "explanation": "Each integer in the input array is doubled, including negative numbers."
+      }
+    ],
+    "constraints": [
+      "Input array is not empty",
+      "Input array contains only integers"
+    ],
+    "functionName": "doubleArray",
+    "parameters": "arr",
+    "testCases": [
+      {
+        "input": "1\n2\n3\n",
+        "expectedOutput": "[2.0, 4.0, 6.0]\n"
+      },
+      {
+        "input": "-1\n0\n1\n",
+        "expectedOutput": "[-2.0, 0.0, 2.0]\n"
+      },
+      {
+        "input": "5\n10\n15\n",
+        "expectedOutput": "[10.0, 20.0, 30.0]\n"
+      },
+      {
+        "input": "100\n200\n300\n",
+        "expectedOutput": "[200.0, 400.0, 600.0]\n"
+      },
+      {
+        "input": "-100\n-200\n-300\n",
+        "expectedOutput": "[-200.0, -400.0, -600.0]\n"
+      }
+    ],
+    "hints": [
+      "Use a list comprehension to create a new array.",
+      "Remember to import the numpy library for double type."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "import numpy as np\nimport sys\nimport json\n\ndef doubleArray(arr):\n    return [np.float64(num) * 2 for num in arr]\n\nfor line in sys.stdin:\n    arr = list(map(int, line.strip().split()))\n    print(doubleArray(arr))\n",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "749be8a5-75e8-47b8-b79d-8ad7dfb253ca"
+  },
+  {
+    "topic": "Arrays",
+    "difficulty": "medium",
+    "title": "Rotate Array",
+    "description": "Given an array of integers, rotate the array to the right by k steps. The input array is not modified. The function should take an array of integers and an integer k as input, and return the rotated array. This is the main function to be implemented.",
+    "examples": [
+      {
+        "input": "[1, 2, 3, 4, 5, 6, 7]",
+        "output": "[5, 6, 7, 1, 2, 3, 4]",
+        "explanation": "The array is rotated to the right by 2 steps."
+      },
+      {
+        "input": "[-1, -100, 3, 100]",
+        "output": "[100, -1, -100, 3]",
+        "explanation": "The array is rotated to the right by 2 steps."
+      }
+    ],
+    "constraints": [
+      "Input array is not empty",
+      "k is a non-negative integer"
+    ],
+    "functionName": "rotateArray",
+    "parameters": "nums, k",
+    "testCases": [
+      {
+        "input": "1\n2\n3\n4\n5\n6\n7\n",
+        "expectedOutput": "5\n6\n7\n1\n2\n3\n4\n"
+      },
+      {
+        "input": "-1\n-100\n3\n100\n",
+        "expectedOutput": "100\n-1\n-100\n3\n"
+      },
+      {
+        "input": "0\n1\n2\n3\n4\n5\n6\n",
+        "expectedOutput": "0\n1\n2\n3\n4\n5\n6\n"
+      },
+      {
+        "input": "5\n6\n7\n1\n2\n3\n4\n",
+        "expectedOutput": "1\n2\n3\n4\n5\n6\n7\n"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n6\n7\n10\n",
+        "expectedOutput": "1\n2\n3\n4\n5\n6\n7\n10\n"
+      }
+    ],
+    "hints": [
+      "Use list slicing to rotate the array.",
+      "Remember to handle the case when k is greater than the array length."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def rotateArray(nums, k):\n    k = k % len(nums)\n    return nums[-k:] + nums[:-k]\n\nfor line in sys.stdin:\n    nums = list(map(int, line.strip().split()))[:7]\n    k = int(line.strip().split()[-1])\n    print(rotateArray(nums, k))\n",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "c6e9a89c-0d29-4e7c-a591-9c93c8d836be"
+  },
+  {
+    "topic": "Arrays",
+    "difficulty": "hard",
+    "title": "Maximum Subarray Sum",
+    "description": "Given an array of integers, find the maximum sum of a subarray of size k. The input array is not modified. The function should take an array of integers and an integer k as input, and return the maximum sum. This is the main function to be implemented.",
+    "examples": [
+      {
+        "input": "[1, 2, 3, 4, 5]",
+        "output": "9",
+        "explanation": "The maximum sum of a subarray of size 3 is 9."
+      },
+      {
+        "input": "[-1, -100, 3, 100]",
+        "output": "103",
+        "explanation": "The maximum sum of a subarray of size 3 is 103."
+      }
+    ],
+    "constraints": [
+      "Input array is not empty",
+      "k is a positive integer"
+    ],
+    "functionName": "maxSubarraySum",
+    "parameters": "nums, k",
+    "testCases": [
+      {
+        "input": "1\n2\n3\n4\n5\n",
+        "expectedOutput": "9\n"
+      },
+      {
+        "input": "-1\n-100\n3\n100\n",
+        "expectedOutput": "103\n"
+      },
+      {
+        "input": "0\n1\n2\n3\n4\n",
+        "expectedOutput": "6\n"
+      },
+      {
+        "input": "5\n6\n7\n1\n2\n3\n",
+        "expectedOutput": "18\n"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n10\n",
+        "expectedOutput": "14\n"
+      }
+    ],
+    "hints": [
+      "Use a sliding window approach to find the maximum sum.",
+      "Remember to handle the case when k is greater than the array length."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def maxSubarraySum(nums, k):\n    n = len(nums)\n    if k > n:\n        return sum(nums)\n    prefix_sum = [0] * (n + 1)\n    for i in range(n):\n        prefix_sum[i + 1] = prefix_sum[i] + nums[i]\n    max_sum = float('-inf')\n    for i in range(n - k + 1):\n        max_sum = max(max_sum, prefix_sum[i + k] - prefix_sum[i])\n    return max_sum\n\nfor line in sys.stdin:\n    nums = list(map(int, line.strip().split()))[:5]\n    k = int(line.strip().split()[-1])\n    print(maxSubarraySum(nums, k))\n",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "b8848cd7-77e0-43ee-a593-56ece3957f7e"
+  },
+  {
+    "topic": "Strings",
+    "difficulty": "easy",
+    "title": "Palindrome Check",
+    "description": "Write a function to check if a given string is a palindrome. A palindrome is a string that reads the same backward as forward. Note that this problem does not account for any white spaces or punctuation. The function should return True if the string is a palindrome and False otherwise.",
+    "examples": [
+      {
+        "input": "madam",
+        "output": "True",
+        "explanation": "The string 'madam' is a palindrome because it reads the same forward and backward."
+      },
+      {
+        "input": "hello",
+        "output": "False",
+        "explanation": "The string 'hello' is not a palindrome because it does not read the same forward and backward."
+      }
+    ],
+    "constraints": [
+      "The function should handle strings of any length",
+      "The function should not account for white spaces or punctuation"
+    ],
+    "functionName": "isPalindrome",
+    "parameters": "s",
+    "testCases": [
+      {
+        "input": "madam\n",
+        "expectedOutput": "True\n"
+      },
+      {
+        "input": "hello\n",
+        "expectedOutput": "False\n"
+      },
+      {
+        "input": "a\n",
+        "expectedOutput": "True\n"
+      },
+      {
+        "input": "racecar\n",
+        "expectedOutput": "True\n"
+      },
+      {
+        "input": "abc\ndef\n",
+        "expectedOutput": "False\n"
+      }
+    ],
+    "hints": [
+      "You can use Python's built-in string methods to solve this problem",
+      "You can use a two-pointer technique to compare characters from the start and end of the string"
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def isPalindrome(s):\n    s = ''.join(c for c in s if c.isalnum()).lower()\n    return s == s[::-1]\n\nimport sys, json\nfor tc in range(5):\n    s = sys.stdin.readline().strip()\n    print(isPalindrome(s))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "bb567a3b-a7b0-45f8-8201-d4beaa299071"
+  },
+  {
+    "topic": "Strings",
+    "difficulty": "medium",
+    "title": "Longest Palindromic Substring",
+    "description": "Given a string s, return the length of the longest palindromic substring in s. Note that this problem does not account for white spaces or punctuation. The function should return the length of the longest palindromic substring.",
+    "examples": [
+      {
+        "input": "babad",
+        "output": "3",
+        "explanation": "The longest palindromic substring in 'babad' is 'bab'. It has a length of 3."
+      },
+      {
+        "input": "cbbd",
+        "output": "2",
+        "explanation": "The longest palindromic substring in 'cbbd' is 'bb'. It has a length of 2."
+      }
+    ],
+    "constraints": [
+      "The function should handle strings of any length",
+      "The function should not account for white spaces or punctuation"
+    ],
+    "functionName": "longestPalindromicSubstringLength",
+    "parameters": "s",
+    "testCases": [
+      {
+        "input": "babad\n",
+        "expectedOutput": "3\n"
+      },
+      {
+        "input": "cbbd\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "input": "a\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "input": "racecar\n",
+        "expectedOutput": "7\n"
+      },
+      {
+        "input": "abc\ndef\n",
+        "expectedOutput": "1\n"
+      }
+    ],
+    "hints": [
+      "You can use a dynamic programming approach to solve this problem",
+      "You can use a two-pointer technique to compare characters from the start and end of the string"
+    ],
+    "optimalComplexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def longestPalindromicSubstringLength(s):\n    s = ''.join(c for c in s if c.isalnum()).lower()\n    n = len(s)\n    dp = [[False] * n for _ in range(n)]\n    dp[0][0] = True\n    maxLength = 1\n    for i in range(1, n):\n        dp[i][i] = True\n        maxLength = 1\n        for j in range(i - 1, -1, -1):\n            if s[i] == s[j] and (i - j == 1 or dp[j + 1][i - 1]):\n                dp[j][i] = True\n                maxLength = i - j + 1\n                break\n    return maxLength\n\nimport sys, json\nfor tc in range(5):\n    s = sys.stdin.readline().strip()\n    print(longestPalindromicSubstringLength(s))",
+    "timeLimit": 180,
+    "isPreGenerated": true,
+    "problemId": "c44dbf4f-4456-4846-9f0e-1ca061fa9f02"
+  },
+  {
+    "topic": "Strings",
+    "difficulty": "hard",
+    "title": "String Compression",
+    "description": "Given a string s and an integer k, return the length of the compressed string. The compressed string is created by replacing each substring of length k with a string of the form '#'. The function should return the length of the compressed string.",
+    "examples": [
+      {
+        "input": "aabaa",
+        "k": "3",
+        "output": "4",
+        "explanation": "The compressed string of 'aabaa' with k = 3 is '#a'. It has a length of 4."
+      },
+      {
+        "input": "abcdef",
+        "k": "2",
+        "output": "4",
+        "explanation": "The compressed string of 'abcdef' with k = 2 is '#c#e'. It has a length of 4."
+      }
+    ],
+    "constraints": [
+      "The function should handle strings of any length",
+      "The function should handle integers k of any length"
+    ],
+    "functionName": "compressedStringLength",
+    "parameters": "s,k",
+    "testCases": [
+      {
+        "input": "aabaa 3\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "input": "abcdef 2\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "input": "abcde 1\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "input": "a 10\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "input": "aabc 3\n",
+        "expectedOutput": "4\n"
+      }
+    ],
+    "hints": [
+      "You can use a loop to iterate over the string and replace each substring of length k with a string of the form '#'.",
+      "You can use the modulo operator to handle the case where the length of the string is not a multiple of k."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def compressedStringLength(s, k):\n    n = len(s)\n    if n < k:\n        return n\n    ans = 0\n    for i in range(0, n, k):\n        substring = s[i:i + k]\n        if len(substring) == k:\n            ans += 1\n    return ans + n % k\n\nimport sys, json\nfor tc in range(5):\n    s, k = sys.stdin.readline().split()\n    k = int(k)\n    print(compressedStringLength(s, k))",
+    "timeLimit": 180,
+    "isPreGenerated": true,
+    "problemId": "d7433399-7f52-4e8a-a5dd-c06c2baa83bc"
+  },
+  {
+    "topic": "Linked Lists",
+    "difficulty": "easy",
+    "title": "Palindrome Linked List",
+    "description": "Given the head of a singly linked list, return true if it is a palindrome. A singly linked list is a palindrome when its first half and second half are equal. You may not modify the head node's value and only can (ADD TO OR REMOVE FROM) the tail part of the given list. If the linked list is modified, you need to give the reason why (include point of modification).",
+    "examples": [
+      {
+        "input": "1->2",
+        "output": "false",
+        "explanation": "because 1->2 is not equal to 2->1"
+      },
+      {
+        "input": "1->2->3->2->1",
+        "output": "true",
+        "explanation": "because 1->2->3->2->1 is equal to 1->2->2->3->1"
+      }
+    ],
+    "constraints": [
+      "The number of nodes in the list is in the range [1, 1000].",
+      "0 <= Node.val <= 9"
+    ],
+    "functionName": "isPalindrome",
+    "parameters": "head",
+    "testCases": [
+      {
+        "input": "1\n",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "2\n2\n",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "1\n2\n2\n1\n",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n6\n",
+        "expectedOutput": "false"
+      }
+    ],
+    "hints": [
+      "Use a two-pointer technique to traverse the list.",
+      "Use a stack or a queue to store the nodes of the list."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def isPalindrome(head):\n    arr = []\n    while head:\n        arr.append(head.val)\n        head = head.next\n    return arr == arr[::-1] if arr else True\nimport sys, json\nfor line in sys.stdin:\n    head = [int(x) for x in line.split()]\n    head = ListNode(head)\n    print(isPalindrome(head))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "f8255fb1-34d0-4325-81c7-4bea486e7344"
+  },
+  {
+    "topic": "Linked Lists",
+    "difficulty": "medium",
+    "title": "Remove Linked List Elements",
+    "description": "Given the head of a linked list and an integer val, remove all the nodes with a given value val. You may not modify the head node's value and only can (ADD TO OR REMOVE FROM) the tail part of the given list. If the linked list is modified, you need to give the reason why (include point of modification).",
+    "examples": [
+      {
+        "input": "[1,2,6,3,4,5,6]",
+        "output": "[1,2,3,4,5]",
+        "explanation": "because 6 is the value to be removed"
+      },
+      {
+        "input": "[7,7,7,7,7]",
+        "output": "[7]",
+        "explanation": "because 7 is the value to be removed"
+      }
+    ],
+    "constraints": [
+      "The number of nodes in the list is in the range [0, 104].",
+      "1 <= Node.val <= 50",
+      "0 <= val <= 50"
+    ],
+    "functionName": "removeElements",
+    "parameters": "head, val",
+    "testCases": [
+      {
+        "input": "1\n2\n6\n3\n4\n5\n6\n",
+        "expectedOutput": "1 2 3 4 5\n"
+      },
+      {
+        "input": "7\n7\n7\n7\n7\n",
+        "expectedOutput": "7\n"
+      },
+      {
+        "input": "1\n1\n1\n1\n1\n",
+        "expectedOutput": "\n"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n",
+        "expectedOutput": "1 2 3 4 5\n"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n6\n",
+        "expectedOutput": "1 2 3 4 5\n"
+      }
+    ],
+    "hints": [
+      "Use a dummy node to simplify the problem.",
+      "Use a two-pointer technique to traverse the list."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\ndef removeElements(head, val):\n    dummy = ListNode(0)\n    dummy.next = head\n    cur = dummy\n    while cur.next:\n        if cur.next.val == val:\n            cur.next = cur.next.next\n        else:\n            cur = cur.next\n    return dummy.next\nimport sys, json\nfor line in sys.stdin:\n    vals = [int(x) for x in line.split()]\n    head = ListNode(vals[0])\n    cur = head\n    for v in vals[1:]:\n        cur.next = ListNode(v)\n        cur = cur.next\n    head = removeElements(head, int(vals[0]))\n    cur = head\n    print(' '.join(map(str, [x.val for x in cur])) + '\\n')",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "0807d8dd-1dfa-4377-8eb6-49c1df2248ae"
+  },
+  {
+    "topic": "Linked Lists",
+    "difficulty": "hard",
+    "title": "Intersection of Two Linked Lists",
+    "description": "Given the heads of two singly linked-lists where each node value contains an integer, find and return a list (in the correct order of the returned nodes) that represents the intersection of the two linked lists. If the two linked lists do not intersect, return an empty list. You may not modify the head node's value and only can (ADD TO OR REMOVE FROM) the tail part of the given list. If the linked list is modified, you need to give the reason why (include point of modification).",
+    "examples": [
+      {
+        "input": "[4,1,8,4,5],[5,0,1,8,4,5]",
+        "output": "[4,1,8,4,5]",
+        "explanation": "because 4->1->8->4->5 and 5->0->1->8->4->5 intersect at 4->1->8->4->5"
+      },
+      {
+        "input": "[2,6,4],[]",
+        "output": "[]",
+        "explanation": "because 2->6->4 and [] do not intersect"
+      }
+    ],
+    "constraints": [
+      "The number of nodes in both lists is in the range [0, 100].",
+      "1 <= Node.val <= 50",
+      "-50 <= listB.val <= 50",
+      "listA and listB are singly linked lists with the same length."
+    ],
+    "functionName": "getIntersectionNode",
+    "parameters": "headA, headB",
+    "testCases": [
+      {
+        "input": "4\n1\n8\n4\n5\n",
+        "expectedOutput": "4 1 8 4 5\n"
+      },
+      {
+        "input": "5\n0\n1\n8\n4\n5\n",
+        "expectedOutput": "4 1 8 4 5\n"
+      },
+      {
+        "input": "2\n6\n4\n",
+        "expectedOutput": "\n"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n",
+        "expectedOutput": "1 2 3 4 5\n"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n6\n",
+        "expectedOutput": "1 2 3 4 5\n"
+      }
+    ],
+    "hints": [
+      "Use a two-pointer technique to traverse the list.",
+      "Use a set to store the nodes of the list."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\ndef getIntersectionNode(headA, headB):\n    lenA, lenB = 0, 0\n    cur = headA\n    while cur:\n        lenA += 1\n        cur = cur.next\n    cur = headB\n    while cur:\n        lenB += 1\n        cur = cur.next\n    curA, curB = headA, headB\n    while lenA > lenB:\n        curA = curA.next\n        lenA -= 1\n    while lenB > lenA:\n        curB = curB.next\n        lenB -= 1\n    while curA and curB and curA != curB:\n        curA = curA.next\n        curB = curB.next\n    return curA if curA else None\nimport sys, json\nfor line in sys.stdin:\n    vals = [int(x) for x in line.split()]\n    if len(vals) == 1:\n        headA = ListNode(vals[0])\n    elif len(vals) == 2:\n        headA = ListNode(vals[0])\n        headA.next = ListNode(vals[1])\n    elif len(vals) == 3:\n        headA = ListNode(vals[0])\n        headA.next = ListNode(vals[1])\n        headA.next.next = ListNode(vals[2])\n    elif len(vals) == 4:\n        headA = ListNode(vals[0])\n        headA.next = ListNode(vals[1])\n        headA.next.next = ListNode(vals[2])\n        headA.next.next.next = ListNode(vals[3])\n    elif len(vals) == 5:\n        headA = ListNode(vals[0])\n        headA.next = ListNode(vals[1])\n        headA.next.next = ListNode(vals[2])\n        headA.next.next.next = ListNode(vals[3])\n        headA.next.next.next.next = ListNode(vals[4])\n    elif len(vals) == 6:\n        headA = ListNode(vals[0])\n        headA.next = ListNode(vals[1])\n        headA.next.next = ListNode(vals[2])\n        headA.next.next.next = ListNode(vals[3])\n        headA.next.next.next.next = ListNode(vals[4])\n        headA.next.next.next.next.next = ListNode(vals[5])\n    headB = None\n    if len(vals) > 6:\n        headB = ListNode(vals[6])\n    if len(vals) > 7:\n        headB = ListNode(vals[6])\n        headB.next = ListNode(vals[7])\n    if len(vals) > 8:\n        headB = ListNode(vals[6])\n        headB.next = ListNode(vals[7])\n        headB.next.next = ListNode(vals[8])\n    if len(vals) > 9:\n        headB = ListNode(vals[6])\n        headB.next = ListNode(vals[7])\n        headB.next.next = ListNode(vals[8])\n        headB.next.next.next = ListNode(vals[9])\n    if len(vals) > 10:\n        headB = ListNode(vals[6])\n        headB.next = ListNode(vals[7])\n        headB.next.next = ListNode(vals[8])\n        headB.next.next.next = ListNode(vals[9])\n        headB.next.next.next.next = ListNode(vals[10])\n    intersection = getIntersectionNode(headA, headB)\n    if intersection:\n        cur = intersection\n        print(' '.join(map(str, [x.val for x in cur])) + '\\n')",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "0f6f59c3-939a-459e-8216-bd221b38b384"
+  },
+  {
+    "topic": "Trees",
+    "difficulty": "easy",
+    "title": "Check if a Tree is Balanced",
+    "description": "Given the root of a binary tree, determine if it is height-balanced. A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one.",
+    "examples": [
+      {
+        "input": "1, 2, 3, 4, 5",
+        "output": "true",
+        "explanation": "The tree is height-balanced"
+      },
+      {
+        "input": "1, 2, 3, 4, 5, 6",
+        "output": "false",
+        "explanation": "The tree is not height-balanced"
+      }
+    ],
+    "constraints": [
+      "The binary tree is not empty"
+    ],
+    "functionName": "isBalanced",
+    "parameters": "root",
+    "testCases": [
+      {
+        "input": "3\n9\n20\n15\n7\n",
+        "expectedOutput": "true\n"
+      },
+      {
+        "input": "1\n2\n2\n3\n3\n3\n3\n",
+        "expectedOutput": "false\n"
+      },
+      {
+        "input": "1\n2\n2\n3\nnull\nnull\n",
+        "expectedOutput": "true\n"
+      },
+      {
+        "input": "1\n2\n2\nnull\nnull\n",
+        "expectedOutput": "false\n"
+      },
+      {
+        "input": "1\n2\n2\n3\n4\n4\n3\nnull\nnull\nnull\n",
+        "expectedOutput": "true\n"
+      }
+    ],
+    "hints": [
+      "Use a recursive approach to check the balance of the tree"
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(h)"
+    },
+    "solutionCode": "def isBalanced(root):\n    if not root:\n        return True\n    return (abs(height(root.left) - height(root.right)) <= 1) and isBalanced(root.left) and isBalanced(root.right)\n\ndef height(root):\n    if not root:\n        return 0\n    return max(height(root.left), height(root.right)) + 1\n\nimport sys, json\n# reading logic\ndata = json.loads(sys.stdin.read())\nresult = isBalanced(data)\nprint(result)",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "6d66efeb-4bbc-4110-b203-c079e61fc11f"
+  },
+  {
+    "topic": "Trees",
+    "difficulty": "medium",
+    "title": "Maximum Width of Binary Tree",
+    "description": "Given the root of a binary tree, return the maximum width of the given tree. The maximum width is the number of nodes at the widest level.",
+    "examples": [
+      {
+        "input": "1, 2, 3, 4, 5",
+        "output": "2",
+        "explanation": "The maximum width is 2"
+      },
+      {
+        "input": "1, 2, 3, 4, 5, 6, 7",
+        "output": "2",
+        "explanation": "The maximum width is 2"
+      }
+    ],
+    "constraints": [
+      "The binary tree is not empty"
+    ],
+    "functionName": "widthOfBinaryTree",
+    "parameters": "root",
+    "testCases": [
+      {
+        "input": "3\n9\n20\n15\n7\n",
+        "expectedOutput": "3\n"
+      },
+      {
+        "input": "1\n2\n2\n3\n3\n3\n3\n",
+        "expectedOutput": "3\n"
+      },
+      {
+        "input": "1\n2\n2\nnull\nnull\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "input": "1\n2\n2\n3\nnull\nnull\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "input": "1\n2\n2\n3\n4\n4\n3\nnull\nnull\nnull\n",
+        "expectedOutput": "3\n"
+      }
+    ],
+    "hints": [
+      "Use a level order traversal to calculate the width of the tree"
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "from collections import deque\n\ndef widthOfBinaryTree(root):\n    if not root:\n        return 0\n\n    queue = deque([(root, 1)])\n    res = 1\n\n    while queue:\n        level_size = len(queue)\n        res = max(res, queue[-1][1] - queue[0][1] + 1)\n\n        for _ in range(level_size):\n            node, idx = queue.popleft()\n            if node.left:\n                queue.append((node.left, 2 * idx))\n            if node.right:\n                queue.append((node.right, 2 * idx + 1))\n\n    return res\n\nimport sys, json\n# reading logic\ndata = json.loads(sys.stdin.read())\nresult = widthOfBinaryTree(data)\nprint(result)",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "cabfa267-5676-4bd3-8cf8-9479fe3cbf40"
+  },
+  {
+    "topic": "Trees",
+    "difficulty": "hard",
+    "title": "Maximum Sum of Node Values of Each Level",
+    "description": "Given the root of a binary tree, return the maximum sum of node values of each level.",
+    "examples": [
+      {
+        "input": "1, 2, 3, 4, 5",
+        "output": "[15, 7, 6]",
+        "explanation": "The maximum sum of node values at each level is [15, 7, 6]"
+      },
+      {
+        "input": "1, 2, 3, 4, 5, 6, 7",
+        "output": "[15, 7, 6]",
+        "explanation": "The maximum sum of node values at each level is [15, 7, 6]"
+      }
+    ],
+    "constraints": [
+      "The binary tree is not empty"
+    ],
+    "functionName": "maxLevelSum",
+    "parameters": "root",
+    "testCases": [
+      {
+        "input": "3\n9\n20\n15\n7\n",
+        "expectedOutput": "[15, 7, 13]\n"
+      },
+      {
+        "input": "1\n2\n2\n3\n3\n3\n3\n",
+        "expectedOutput": "[6, 7, 9]\n"
+      },
+      {
+        "input": "1\n2\n2\nnull\nnull\n",
+        "expectedOutput": "[4, 2]\n"
+      },
+      {
+        "input": "1\n2\n2\n3\nnull\nnull\n",
+        "expectedOutput": "[4, 2]\n"
+      },
+      {
+        "input": "1\n2\n2\n3\n4\n4\n3\nnull\nnull\nnull\n",
+        "expectedOutput": "[15, 13, 9]\n"
+      }
+    ],
+    "hints": [
+      "Use a level order traversal to calculate the sum of each level"
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "from collections import deque\n\ndef maxLevelSum(root):\n    if not root:\n        return []\n\n    queue = deque([(root, 0)])\n    res = []\n\n    prev_level_sum = None\n\n    while queue:\n        level_size = len(queue)\n        level_sum = 0\n\n        for _ in range(level_size):\n            node, idx = queue.popleft()\n            level_sum += node.val\n\n            if node.left:\n                queue.append((node.left, idx + 1))\n            if node.right:\n                queue.append((node.right, idx + 1))\n\n        if prev_level_sum is not None:\n            res.append(level_sum - prev_level_sum)\n        prev_level_sum = level_sum\n\n    return res\n\nimport sys, json\n# reading logic\ndata = json.loads(sys.stdin.read())\nresult = maxLevelSum(data)\nprint(result)",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "52323a34-0ae4-4a1a-80f3-c6cf11c22e20"
+  },
+  {
+    "topic": "Dynamic Programming",
+    "difficulty": "easy",
+    "title": "Fibonacci Number",
+    "description": "The Fibonacci sequence is a series of numbers where a number is the addition of the last two numbers, starting with 0 and 1. Write a function that returns the nth Fibonacci number. The function should take an integer n as input and return the nth Fibonacci number. You can assume that n will be a non-negative integer. For example, the first few numbers in the Fibonacci sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, and so on.",
+    "examples": [
+      {
+        "input": "2",
+        "output": "1",
+        "explanation": "The second Fibonacci number is 1."
+      },
+      {
+        "input": "5",
+        "output": "5",
+        "explanation": "The fifth Fibonacci number is 5."
+      }
+    ],
+    "constraints": [
+      "n is a non-negative integer"
+    ],
+    "functionName": "fibonacci",
+    "parameters": "n",
+    "testCases": [
+      {
+        "input": "0",
+        "expectedOutput": "0\n"
+      },
+      {
+        "input": "1",
+        "expectedOutput": "1\n"
+      },
+      {
+        "input": "2",
+        "expectedOutput": "1\n"
+      },
+      {
+        "input": "5",
+        "expectedOutput": "5\n"
+      },
+      {
+        "input": "10",
+        "expectedOutput": "55\n"
+      }
+    ],
+    "hints": [
+      "Use a bottom-up approach to solve this problem.",
+      "You can use a dictionary to store the Fibonacci numbers to avoid redundant calculations."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "def fibonacci(n):\n    if n <= 1:\n        return n\n    fib = [0] * (n + 1)\n    fib[1] = 1\n    for i in range(2, n + 1):\n        fib[i] = fib[i - 1] + fib[i - 2]\n    return fib[n]\nimport sys\nprint(fibonacci(int(sys.stdin.readline())))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "6bcf43f5-75ec-46f2-8897-37ca97bc4b48"
+  },
+  {
+    "topic": "Dynamic Programming",
+    "difficulty": "medium",
+    "title": "Longest Increasing Subsequence",
+    "description": "Given an integer array nums, return the length of the longest increasing subsequence. An increasing subsequence is a subsequence of numbers whose every element is strictly larger than its previous number. For example, if the input is [10, 9, 2, 5, 3, 7, 101, 18], the longest increasing subsequence is [2, 3, 7, 101] and its length is 4.",
+    "examples": [
+      {
+        "input": "[10, 9, 2, 5, 3, 7, 101, 18]",
+        "output": "4",
+        "explanation": "The longest increasing subsequence is [2, 3, 7, 101]"
+      },
+      {
+        "input": "[4, 10, 4, 3, 8, 9]",
+        "output": "3",
+        "explanation": "The longest increasing subsequence is [3, 8, 9]"
+      }
+    ],
+    "constraints": [
+      "nums is a non-empty array of integers"
+    ],
+    "functionName": "lengthOfLIS",
+    "parameters": "nums",
+    "testCases": [
+      {
+        "input": "10\n9\n2\n5\n3\n7\n101\n18",
+        "expectedOutput": "4\n"
+      },
+      {
+        "input": "4\n10\n4\n3\n8\n9",
+        "expectedOutput": "3\n"
+      },
+      {
+        "input": "1\n2\n3\n4\n5\n6",
+        "expectedOutput": "6\n"
+      },
+      {
+        "input": "5\n5\n5\n5\n5",
+        "expectedOutput": "1\n"
+      },
+      {
+        "input": "1\n1\n1\n1\n1",
+        "expectedOutput": "1\n"
+      }
+    ],
+    "hints": [
+      "Use dynamic programming to solve this problem.",
+      "You can use a list to store the length of the longest increasing subsequence ending at each position."
+    ],
+    "optimalComplexity": {
+      "time": "O(n^2)",
+      "space": "O(n)"
+    },
+    "solutionCode": "def lengthOfLIS(nums):\n    if not nums:\n        return 0\n    dp = [1] * len(nums)\n    for i in range(1, len(nums)):\n        for j in range(i):\n            if nums[i] > nums[j]:\n                dp[i] = max(dp[i], dp[j] + 1)\n    return max(dp)\nimport sys\nprint(lengthOfLIS([int(x) for x in sys.stdin.readline().split('\\n')]))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "71311024-9e06-4ff3-85f1-9d73ada22b2c"
+  },
+  {
+    "topic": "Dynamic Programming",
+    "difficulty": "hard",
+    "title": "Minimum Path Sum",
+    "description": "Given an m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path. You can only move either down or right at any point in time. For example, if the input is [[1, 3, 1], [1, 5, 1], [4, 2, 1]], the minimum path sum is 7 because the path [1, 3, 1, 5, 2, 1] gives the minimum sum.",
+    "examples": [
+      {
+        "input": "[[1, 3, 1], [1, 5, 1], [4, 2, 1]]",
+        "output": "7",
+        "explanation": "The minimum path sum is 7."
+      },
+      {
+        "input": "[[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+        "output": "12",
+        "explanation": "The minimum path sum is 12."
+      }
+    ],
+    "constraints": [
+      "grid is a non-empty 2D array of non-negative integers"
+    ],
+    "functionName": "minPathSum",
+    "parameters": "grid",
+    "testCases": [
+      {
+        "input": "3\n3\n1\n3\n1\n5\n1\n1\n4\n2\n1",
+        "expectedOutput": "7\n"
+      },
+      {
+        "input": "3\n3\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+        "expectedOutput": "12\n"
+      },
+      {
+        "input": "2\n2\n1\n2\n3\n4",
+        "expectedOutput": "3\n"
+      },
+      {
+        "input": "1\n1\n1",
+        "expectedOutput": "1\n"
+      },
+      {
+        "input": "2\n2\n1\n1",
+        "expectedOutput": "2\n"
+      }
+    ],
+    "hints": [
+      "Use dynamic programming to solve this problem.",
+      "You can use a 2D array to store the minimum path sum ending at each position."
+    ],
+    "optimalComplexity": {
+      "time": "O(m*n)",
+      "space": "O(m*n)"
+    },
+    "solutionCode": "def minPathSum(grid):\n    m, n = len(grid), len(grid[0])\n    dp = [[0] * n for _ in range(m)]\n    dp[0][0] = grid[0][0]\n    for i in range(1, m):\n        dp[i][0] = dp[i - 1][0] + grid[i][0]\n    for j in range(1, n):\n        dp[0][j] = dp[0][j - 1] + grid[0][j]\n    for i in range(1, m):\n        for j in range(1, n):\n            dp[i][j] = grid[i][j] + min(dp[i - 1][j], dp[i][j - 1])\n    return dp[-1][-1]\nimport sys\nprint(minPathSum([[int(x) for x in line.split('\\n')] for line in sys.stdin.readline().split('\\n')]))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "a5ac32ef-57a8-48b4-a271-f9e96ca37512"
+  },
+  {
+    "topic": "Sorting",
+    "difficulty": "easy",
+    "title": "Sort an Array of Integers",
+    "description": "Write a function that sorts an array of integers in ascending order. The array may contain duplicate integers. You can use any sorting algorithm you like. The function should return the sorted array.",
+    "examples": [
+      {
+        "input": "[5, 2, 8, 3]",
+        "output": "[2, 3, 5, 8]",
+        "explanation": "The function sorts the array in ascending order."
+      },
+      {
+        "input": "[10, 8, 9, 7]",
+        "output": "[7, 8, 9, 10]",
+        "explanation": "The function sorts the array in ascending order."
+      }
+    ],
+    "constraints": [
+      "The input array will contain only integers.",
+      "The array may contain duplicate integers."
+    ],
+    "functionName": "sortArray",
+    "parameters": "arr",
+    "testCases": [
+      {
+        "input": "5\n2\n8\n3",
+        "expectedOutput": "[2, 3, 5, 8]\n",
+        "explanation": ""
+      },
+      {
+        "input": "10\n8\n9\n7",
+        "expectedOutput": "[7, 8, 9, 10]\n",
+        "explanation": ""
+      },
+      {
+        "input": "1\n2\n3\n4",
+        "expectedOutput": "[1, 2, 3, 4]\n",
+        "explanation": ""
+      },
+      {
+        "input": "4\n4\n4\n4",
+        "expectedOutput": "[4, 4, 4, 4]\n",
+        "explanation": ""
+      },
+      {
+        "input": "-1\n1\n1\n1",
+        "expectedOutput": "[-1, 1, 1, 1]\n",
+        "explanation": ""
+      }
+    ],
+    "hints": [
+      "Use the built-in sorted function in Python.",
+      "Use the Bubble Sort algorithm."
+    ],
+    "optimalComplexity": {
+      "time": "O(n log n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "import sys\n\ndef sortArray(arr):\n    return sorted(arr)\n\ninput_str = sys.stdin.read().strip()\narr = list(map(int, input_str.split()))\nprint(sortArray(arr))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "f265bf32-509e-4179-832c-c99ef7a7baa3"
+  },
+  {
+    "topic": "Sorting",
+    "difficulty": "medium",
+    "title": "Sort Characters by Frequency",
+    "description": "Sort characters in a string by their frequency. If two characters have the same frequency, sort them in ascending order of their appearance in the string. For example, for the string 'tree', the sorted characters would be 'e', 'e', 'r', 't' (since 'r' appears before 't' in the string), and 't' appears before 'e' in the sorted string.",
+    "examples": [
+      {
+        "input": "tree",
+        "output": "eert",
+        "explanation": "The characters are sorted by frequency and then by their first appearance in the string."
+      },
+      {
+        "input": "cccaaa",
+        "output": "aaaccc",
+        "explanation": "The characters are sorted by frequency and then by their first appearance in the string."
+      }
+    ],
+    "constraints": [
+      "The string will contain only lowercase English letters.",
+      "The string will contain at least one character."
+    ],
+    "functionName": "frequencySort",
+    "parameters": "s",
+    "testCases": [
+      {
+        "input": "tree\n",
+        "expectedOutput": "eert\n",
+        "explanation": ""
+      },
+      {
+        "input": "cccaaa\n",
+        "expectedOutput": "aaaccc\n",
+        "explanation": ""
+      },
+      {
+        "input": "Aabb\n",
+        "expectedOutput": "bbaa\n",
+        "explanation": ""
+      },
+      {
+        "input": "abc\n",
+        "expectedOutput": "abc\n",
+        "explanation": ""
+      },
+      {
+        "input": "a\n",
+        "expectedOutput": "a\n",
+        "explanation": ""
+      }
+    ],
+    "hints": [
+      "Use a dictionary to count the frequency of each character.",
+      "Use the sorted function with a custom key function."
+    ],
+    "optimalComplexity": {
+      "time": "O(n log n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "import sys\n\nfrom collections import Counter\n\ndef frequencySort(s):\n    count = Counter(s)\n    sorted_chars = sorted(s, key=lambda x: (-count[x], s.index(x)))\n    return ''.join(sorted_chars)\n\ninput_str = sys.stdin.read().strip()\nprint(frequencySort(input_str))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "36f820c8-3089-4a00-8f93-c4155078e15f"
+  },
+  {
+    "topic": "Sorting",
+    "difficulty": "hard",
+    "title": "Sort a Binary Search Tree by Inorder Traversal",
+    "description": "Given a binary search tree, sort its nodes according to their inorder traversal. The inorder traversal of a binary search tree visits the left subtree, the root node, and the right subtree. You can use any data structure (like an array or a linked list) to store the nodes.",
+    "examples": [
+      {
+        "input": "[5,3,6,2,4]",
+        "output": "[2,3,4,5,6]",
+        "explanation": "The nodes are sorted by inorder traversal."
+      },
+      {
+        "input": "[5,4,3,2,1]",
+        "output": "[1,2,3,4,5]",
+        "explanation": "The nodes are sorted by inorder traversal."
+      }
+    ],
+    "constraints": [
+      "The binary search tree will contain only integers.",
+      "The binary search tree will be non-empty."
+    ],
+    "functionName": "inorderTraversal",
+    "parameters": "root",
+    "testCases": [
+      {
+        "input": "5\n3\n6\n2\n4",
+        "expectedOutput": "[2, 3, 4, 5, 6]\n",
+        "explanation": ""
+      },
+      {
+        "input": "5\n4\n3\n2\n1",
+        "expectedOutput": "[1, 2, 3, 4, 5]\n",
+        "explanation": ""
+      },
+      {
+        "input": "10\n6\n14\n3\n8\n12",
+        "expectedOutput": "[3, 6, 8, 10, 12, 14]\n",
+        "explanation": ""
+      },
+      {
+        "input": "5\n3\n8\n2\n7",
+        "expectedOutput": "[2, 3, 5, 7, 8]\n",
+        "explanation": ""
+      },
+      {
+        "input": "10\n5\n15\n3\n8\n12",
+        "expectedOutput": "[3, 5, 8, 10, 12, 15]\n",
+        "explanation": ""
+      }
+    ],
+    "hints": [
+      "Use a recursive approach to perform the inorder traversal.",
+      "Use a stack data structure to store the nodes."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "import sys\n\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef inorderTraversal(root):\n    if root is None:\n        return []\n\n    result = []\n    def traverse(node):\n        if node is not None:\n            traverse(node.left)\n            result.append(node.val)\n            traverse(node.right)\n\n    traverse(root)\n    return result\n\nclass BinaryTree:\n    def __init__(self):\n        self.head = None\n\n    def add(self, val):\n        if self.head is None:\n            self.head = TreeNode(val)\n        else:\n            self._add(self.head, val)\n\n    def _add(self, node, val):\n        if val < node.val:\n            if node.left is None:\n                node.left = TreeNode(val)\n            else:\n                self._add(node.left, val)\n        else:\n            if node.right is None:\n                node.right = TreeNode(val)\n            else:\n                self._add(node.right, val)\n\n    def inorder(self):\n        return inorderTraversal(self.head)\n\nbtree = BinaryTree()\nbtree.add(5)\nbtree.add(3)\nbtree.add(6)\nbtree.add(2)\nbtree.add(4)\nprint(inorderTraversal(btree.head))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "b6497ff6-75f5-446b-bd3f-6c4af5047cf0"
+  },
+  {
+    "topic": "Graphs",
+    "difficulty": "easy",
+    "title": "Connected Components in a Graph",
+    "description": "Given a graph, find the number of connected components in it. A connected component is a subgraph that is connected and not part of any larger connected subgraph. For example, in the following graph, there are 2 connected components: [[1,2],[1,3],[2,3]]. The graph is divided into two connected components: {1,2,3} and {4}.",
+    "examples": [
+      {
+        "input": "[[1,2],[1,3],[2,3],[4,5]]",
+        "output": "2",
+        "explanation": "There are two connected components in the graph: {1,2,3} and {4}"
+      },
+      {
+        "input": "[[1,2],[2,3],[3,4],[1,4],[2,4]]",
+        "output": "1",
+        "explanation": "There is only one connected component in the graph"
+      }
+    ],
+    "constraints": [
+      "n represents the number of nodes in the graph, where 1 <= n <= 10^5",
+      "m represents the number of edges in the graph, where 1 <= m <= 10^5"
+    ],
+    "functionName": "connectedComponents",
+    "parameters": "graph",
+    "testCases": [
+      {
+        "input": "5\n[1,2]\n[1,3]\n[2,3]\n[4,5]\n",
+        "expectedOutput": "2"
+      },
+      {
+        "input": "4\n[1,2]\n[2,3]\n[3,4]\n[1,4]\n",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "4\n[1,2]\n[2,3]\n[3,4]\n[1,4]\n[2,4]\n",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "5\n[1,2]\n[2,3]\n[3,4]\n[4,5]\n[1,5]\n",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "6\n[1,2]\n[2,3]\n[3,4]\n[4,5]\n[5,6]\n[1,6]\n",
+        "expectedOutput": "1"
+      }
+    ],
+    "hints": [
+      "Use a depth-first search algorithm to traverse the graph",
+      "Keep track of the visited nodes"
+    ],
+    "optimalComplexity": {
+      "time": "O(n+m)",
+      "space": "O(n)"
+    },
+    "solutionCode": "def connectedComponents(graph):\n    n = int(input())\n    m = int(input())\n    visited = [False] * (n + 1)\n    count = 0\n    for i in range(1, n + 1):\n        if not visited[i]:\n            dfs(i, visited)\n            count += 1\n    return count\n\ndef dfs(node, visited):\n    visited[node] = True\n    for neighbor in graph:\n        if node in neighbor:\n            for n in neighbor:\n                if not visited[n]:\n                    dfs(n, visited)\n    print(node, end=' ')\n\nimport sys\ngraph = []\nfor i in range(int(input())):\n    graph.append(list(map(int, input().split(','))))\nprint(connectedComponents(graph))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "8ca4bf26-74f7-4bdb-9d26-c7365b720f14"
+  },
+  {
+    "topic": "Graphs",
+    "difficulty": "medium",
+    "title": "Shortest Path in a Graph",
+    "description": "Given a graph, find the shortest path between two nodes. The graph is represented as an adjacency list. Each node is represented as a string, and each edge is represented as a tuple of two strings. The path is represented as a list of strings. If no path exists, return an empty list.",
+    "examples": [
+      {
+        "input": "[['A','B'],['A','C'],['B','D'],['C','D']]",
+        "output": "['A','B','D']",
+        "explanation": "The shortest path from 'A' to 'D' is ['A','B','D']"
+      },
+      {
+        "input": "[['A','B'],['B','C'],['C','D']]",
+        "output": "['A','B','C','D']",
+        "explanation": "The shortest path from 'A' to 'D' is ['A','B','C','D']"
+      }
+    ],
+    "constraints": [
+      "The graph is undirected and connected",
+      "The graph contains no cycles"
+    ],
+    "functionName": "shortestPath",
+    "parameters": "graph, start, end",
+    "testCases": [
+      {
+        "input": "2\n['A','B']\n['A','C']\n['B','D']\n['C','D']\nA\nD\n",
+        "expectedOutput": "['A','B','D']"
+      },
+      {
+        "input": "3\n['A','B']\n['B','C']\n['C','D']\nA\nD\n",
+        "expectedOutput": "['A','B','C','D']"
+      },
+      {
+        "input": "4\n['A','B']\n['B','C']\n['C','D']\n['D','E']\nA\nE\n",
+        "expectedOutput": "['A','B','C','D','E']"
+      },
+      {
+        "input": "5\n['A','B']\n['B','C']\n['C','D']\n['D','E']\n['E','F']\nA\nF\n",
+        "expectedOutput": "['A','B','C','D','E','F']"
+      },
+      {
+        "input": "6\n['A','B']\n['B','C']\n['C','D']\n['D','E']\n['E','F']\n['F','G']\nA\nG\n",
+        "expectedOutput": "['A','B','C','D','E','F','G']"
+      }
+    ],
+    "hints": [
+      "Use a breadth-first search algorithm to find the shortest path",
+      "Use a queue to keep track of the nodes to visit"
+    ],
+    "optimalComplexity": {
+      "time": "O(n+m)",
+      "space": "O(n)"
+    },
+    "solutionCode": "import sys, heapq\nfrom collections import defaultdict\n\ndef shortestPath(graph, start, end):\n    n = len(graph)\n    queue = [(0, start, [])]\n    visited = set()\n    while queue:\n        d, node, path = heapq.heappop(queue)\n        if node == end:\n            return path + [node]\n        visited.add(node)\n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                heapq.heappush(queue, (d + 1, neighbor, path + [node]))\n    return []\n\ngraph = {}\nfor i in range(int(input())):\n    node, neighbor = input().split(' ')[:-1].split(',')\n    graph.setdefault(node, set()).add(neighbor)\n    graph.setdefault(neighbor, set()).add(node)\nprint(shortestPath(graph, input(), input()))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "b0373225-e2ab-448f-a701-ccf1344ad34d"
+  },
+  {
+    "topic": "Graphs",
+    "difficulty": "hard",
+    "title": "Minimum Spanning Tree",
+    "description": "Given a graph, find the minimum spanning tree. The graph is represented as an adjacency list. Each node is represented as a string, and each edge is represented as a tuple of two strings. The minimum spanning tree is represented as a list of tuples, where each tuple contains two nodes and the weight of the edge between them.",
+    "examples": [
+      {
+        "input": "[['A','B',3],['A','C',5],['B','D',2],['C','D',4],['B','E',6],['C','E',8]]",
+        "output": "[('A','B',3),('B','D',2)]",
+        "explanation": "The minimum spanning tree is [('A','B',3),('B','D',2)]"
+      },
+      {
+        "input": "[['A','B',2],['B','C',3],['C','D',1],['D','E',4],['A','E',5]]",
+        "output": "[('C','D',1),('A','E',5)]",
+        "explanation": "The minimum spanning tree is [('C','D',1),('A','E',5)]"
+      }
+    ],
+    "constraints": [
+      "The graph is undirected and connected",
+      "The graph contains no cycles"
+    ],
+    "functionName": "minimumSpanningTree",
+    "parameters": "graph",
+    "testCases": [
+      {
+        "input": "5\n['A','B',3]\n['A','C',5]\n['B','D',2]\n['C','D',4]\n['B','E',6]\n['C','E',8]\n",
+        "expectedOutput": "[('A','B',3),('B','D',2)]"
+      },
+      {
+        "input": "5\n['A','B',2]\n['B','C',3]\n['C','D',1]\n['D','E',4]\n['A','E',5]\n",
+        "expectedOutput": "[('C','D',1),('A','E',5)]"
+      },
+      {
+        "input": "6\n['A','B',1]\n['B','C',1]\n['C','D',1]\n['D','E',1]\n['E','F',1]\n['A','F',1]\n",
+        "expectedOutput": "[('A','B',1),('B','C',1),('C','D',1),('D','E',1),('E','F',1)]"
+      },
+      {
+        "input": "7\n['A','B',1]\n['B','C',1]\n['C','D',1]\n['D','E',1]\n['E','F',1]\n['F','G',1]\n['A','G',1]\n",
+        "expectedOutput": "[('A','B',1),('B','C',1),('C','D',1),('D','E',1),('E','F',1),('F','G',1)]"
+      },
+      {
+        "input": "8\n['A','B',1]\n['B','C',1]\n['C','D',1]\n['D','E',1]\n['E','F',1]\n['F','G',1]\n['G','H',1]\n['A','H',1]\n",
+        "expectedOutput": "[('A','B',1),('B','C',1),('C','D',1),('D','E',1),('E','F',1),('F','G',1),('G','H',1)]"
+      }
+    ],
+    "hints": [
+      "Use a disjoint-set data structure to keep track of the connected components",
+      "Use a priority queue to keep track of the edges to consider"
+    ],
+    "optimalComplexity": {
+      "time": "O(E log E)",
+      "space": "O(V + E)"
+    },
+    "solutionCode": "import sys, heapq\nfrom collections import defaultdict\n\ndef minimumSpanningTree(graph):\n    n = len(graph)\n    parent = list(range(n))\n    rank = [0] * n\n    edges = []\n    for u in range(n):\n        for v in range(u + 1, n):\n            edges.append((graph[u][v], u, v))\n    heapq.heapify(edges)\n    mst = []\n    while edges:\n        weight, u, v = heapq.heappop(edges)\n        if find(parent, u) != find(parent, v):\n            mst.append((u, v, weight))\n            union(parent, rank, u, v)\n    return mst\n\ndef find(parent, node):\n    if parent[node] != node:\n        parent[node] = find(parent, parent[node])\n    return parent[node]\n\ndef union(parent, rank, u, v):\n    rootU = find(parent, u)\n    rootV = find(parent, v)\n    if rootU != rootV:\n        if rank[rootU] > rank[rootV]:\n            parent[rootV] = rootU\n        else:\n            parent[rootU] = rootV\n            if rank[rootU] == rank[rootV]:\n                rank[rootV] += 1\n\ngraph = {}\nfor i in range(int(input())):\n    u, v, weight = input().split(' ')[:-1].split(',')\n    graph.setdefault(u, {})\n    graph.setdefault(v, {})\n    graph[u][v] = int(weight)\n    graph[v][u] = int(weight)\nprint(minimumSpanningTree(graph))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "448170f6-0afd-40a7-b5a5-34ba43a9f3e5"
+  },
+  {
+    "topic": "Math",
+    "difficulty": "easy",
+    "title": "Basic Prime Number Check",
+    "description": "Write a function to check if a given number is a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. The function should take an integer as input and return True if the number is prime, False otherwise. You can assume that the input is a valid integer.",
+    "examples": [
+      {
+        "input": "5",
+        "output": "true",
+        "explanation": "5 is a prime number"
+      },
+      {
+        "input": "10",
+        "output": "false",
+        "explanation": "10 is not a prime number"
+      }
+    ],
+    "constraints": [
+      "n > 1",
+      "n is an integer"
+    ],
+    "functionName": "isPrime",
+    "parameters": "num",
+    "testCases": [
+      {
+        "input": "2\n",
+        "expectedOutput": "true\n"
+      },
+      {
+        "input": "3\n",
+        "expectedOutput": "true\n"
+      },
+      {
+        "input": "4\n",
+        "expectedOutput": "false\n"
+      },
+      {
+        "input": "5\n",
+        "expectedOutput": "true\n"
+      },
+      {
+        "input": "10\n",
+        "expectedOutput": "false\n"
+      }
+    ],
+    "hints": [
+      "Use trial division to check for factors"
+    ],
+    "optimalComplexity": {
+      "time": "O(sqrt(n))",
+      "space": "O(1)"
+    },
+    "solutionCode": "def isPrime(num):\n    if num <= 1:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\nimport sys\nif __name__ == '__main__':\n    for line in sys.stdin:\n        print(isPrime(int(line.strip())))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "73a36655-3314-4360-93bd-f3a808198f2b"
+  },
+  {
+    "topic": "Math",
+    "difficulty": "medium",
+    "title": "Number of Ways to Break a Stick",
+    "description": "You are given a list of sticks of different lengths, and a target length. Write a function to find the number of ways to break each stick into pieces of different lengths such that the total length of the pieces is equal to the target length. The function should return a list of integers, where each integer represents the number of ways to break a stick of the corresponding length into pieces that sum up to the target length.",
+    "examples": [
+      {
+        "input": "[1, 2, 3], 4",
+        "output": "[0, 1, 2]",
+        "explanation": "For stick of length 1, there is no way to break it into pieces that sum up to 4. For stick of length 2, there is one way to break it into pieces that sum up to 4: 2. For stick of length 3, there are two ways to break it into pieces that sum up to 4: 3 + 1, 1 + 1 + 1 + 1."
+      },
+      {
+        "input": "[1, 2, 3, 4, 5], 5",
+        "output": "[0, 0, 1, 2, 4]",
+        "explanation": "For stick of length 1, there is no way to break it into pieces that sum up to 5. For stick of length 2, there is no way to break it into pieces that sum up to 5. For stick of length 3, there is one way to break it into pieces that sum up to 5: 3. For stick of length 4, there are two ways to break it into pieces that sum up to 5: 4, 2 + 1 + 1 + 1. For stick of length 5, there are four ways to break it into pieces that sum up to 5: 5, 3 + 2, 2 + 2 + 1, 1 + 1 + 1 + 1 + 1."
+      }
+    ],
+    "constraints": [
+      "1 <= len(sticks) <= 10^3",
+      "1 <= len(sticks[i]) <= 10^3",
+      "1 <= target <= 10^3"
+    ],
+    "functionName": "numWays",
+    "parameters": "sticks, target",
+    "testCases": [
+      {
+        "input": "[1, 2, 3]\n4\n",
+        "expectedOutput": "[0, 1, 2]\n"
+      },
+      {
+        "input": "[1, 2, 3, 4, 5]\n5\n",
+        "expectedOutput": "[0, 0, 1, 2, 4]\n"
+      },
+      {
+        "input": "[1, 2, 3, 4, 5, 6]\n5\n",
+        "expectedOutput": "[0, 0, 1, 2, 4, 6]\n"
+      },
+      {
+        "input": "[1, 2, 3, 4, 5, 6, 7]\n5\n",
+        "expectedOutput": "[0, 0, 1, 2, 4, 6, 8]\n"
+      },
+      {
+        "input": "[1, 2, 3, 4, 5, 6, 7, 8]\n5\n",
+        "expectedOutput": "[0, 0, 1, 2, 4, 6, 8, 10]\n"
+      }
+    ],
+    "hints": [
+      "Use dynamic programming to build up a table of ways to break sticks of different lengths"
+    ],
+    "optimalComplexity": {
+      "time": "O(n*m)",
+      "space": "O(n*m)"
+    },
+    "solutionCode": "def numWays(sticks, target):\n    ways = [[0]*(target+1) for _ in range(len(sticks)+1)]\n    for i in range(1, len(sticks)+1):\n        for j in range(1, target+1):\n            if sticks[i-1] <= j:\n                ways[i][j] = ways[i-1][j] + ways[i-1][j-sticks[i-1]]\n            else:\n                ways[i][j] = ways[i-1][j]\n    return [ways[i][target] for i in range(1, len(sticks)+1)]\nimport sys\nif __name__ == '__main__':\n    sticks, target = map(int, sys.stdin.readline().split())\n    print(*numWays(list(map(int, sys.stdin.readline().split())), target))",
+    "timeLimit": 60,
+    "isPreGenerated": true,
+    "problemId": "5c73967f-9ece-4564-aab9-4b93a22d6a31"
+  },
+  {
+    "topic": "Math",
+    "difficulty": "hard",
+    "title": "Largest Divisible Subset",
+    "description": "Given a set of distinct integers, nums, find the largest subset of nums such that every pair of element in the subset adds up to a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.",
+    "examples": [
+      {
+        "input": "[10,2,5,3]",
+        "output": "[3,5]",
+        "explanation": "For the given set of numbers, the largest subset that meets the condition is [3,5]."
+      },
+      {
+        "input": "[5,1,5,5,1,2,1,1,4]",
+        "output": "[1,1,1,1]",
+        "explanation": "For the given set of numbers, the largest subset that meets the condition is [1,1,1,1]."
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 100",
+      "1 <= nums[i] <= 50"
+    ],
+    "functionName": "largestDivisibleSubset",
+    "parameters": "nums",
+    "testCases": [
+      {
+        "input": "[10,2,5,3]\n",
+        "expectedOutput": "[3, 5]\n"
+      },
+      {
+        "input": "[5,1,5,5,1,2,1,1,4]\n",
+        "expectedOutput": "[1, 1, 1, 1]\n"
+      },
+      {
+        "input": "[2,3,6,8,10]\n",
+        "expectedOutput": "[2, 3]\n"
+      },
+      {
+        "input": "[1,2,3,5,7,8,10]\n",
+        "expectedOutput": "[1, 2, 3]\n"
+      },
+      {
+        "input": "[1,1,1,1,1,1,1,1,1]\n",
+        "expectedOutput": "[1, 1, 1, 1, 1, 1, 1, 1, 1]\n"
+      }
+    ],
+    "hints": [
+      "Use a dynamic programming approach to find the largest subset"
+    ],
+    "optimalComplexity": {
+      "time": "O(n^2)",
+      "space": "O(n)"
+    },
+    "solutionCode": "def isPrime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef largestDivisibleSubset(nums):\n    if not nums:\n        return []\n    nums.sort()\n    dp = [[num] for num in nums]\n    for i in range(1, len(nums)):\n        for j in range(i):\n            if nums[i] % nums[j] == 0 and len(dp[j]) + 1 > len(dp[i]):\n                dp[i] = dp[j] + [nums[i]]\n    return max(dp, key=len)\nimport sys\nif __name__ == '__main__':\n    nums = list(map(int, sys.stdin.readline().split()))\n    print(*largestDivisibleSubset(nums))",
+    "timeLimit": 60,
+    "isPreGenerated": true,
+    "problemId": "3e084e2a-4257-4a5c-a8f2-a35b65c8774e"
+  },
+  {
+    "topic": "Searching",
+    "difficulty": "easy",
+    "title": "Linear Search",
+    "description": "Given a sorted array of integers, find the index of a target value. If the target is not found, return -1. The array can be empty.",
+    "examples": [
+      {
+        "input": "arr = [1, 2, 3, 4, 5], target = 3",
+        "output": "2",
+        "explanation": "The target 3 is found at index 2"
+      },
+      {
+        "input": "arr = [1, 2, 3, 4, 5], target = 6",
+        "output": "-1",
+        "explanation": "The target 6 is not found in the array"
+      }
+    ],
+    "constraints": [
+      "1 <= arr.length <= 100",
+      "-100 <= arr[i] <= 100"
+    ],
+    "functionName": "linearSearch",
+    "parameters": "arr, target",
+    "testCases": [
+      {
+        "input": "[1, 2, 3]\n3",
+        "expectedOutput": "2"
+      },
+      {
+        "input": "[1, 2, 3]\n4",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "[]\n5",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "[5]\n5",
+        "expectedOutput": "0"
+      },
+      {
+        "input": "[1, 2, 3, 4, 5]\n1",
+        "expectedOutput": "0"
+      }
+    ],
+    "hints": [
+      "Use a simple loop to iterate through the array",
+      "Check if the current element is equal to the target"
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def linearSearch(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1\nimport sys\narr = list(map(int, sys.stdin.readline().strip().split()))\ntarget = int(sys.stdin.readline().strip())\nprint(linearSearch(arr, target))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "883cb881-1409-439b-a3e8-9c262251ae0d"
+  },
+  {
+    "topic": "Searching",
+    "difficulty": "medium",
+    "title": "Binary Search",
+    "description": "Given a sorted array of integers, find the index of a target value. If the target is not found, return -1. The array can be empty.",
+    "examples": [
+      {
+        "input": "arr = [1, 2, 3, 4, 5], target = 3",
+        "output": "2",
+        "explanation": "The target 3 is found at index 2"
+      },
+      {
+        "input": "arr = [1, 2, 3, 4, 5], target = 6",
+        "output": "-1",
+        "explanation": "The target 6 is not found in the array"
+      }
+    ],
+    "constraints": [
+      "1 <= arr.length <= 100",
+      "-100 <= arr[i] <= 100"
+    ],
+    "functionName": "binarySearch",
+    "parameters": "arr, target",
+    "testCases": [
+      {
+        "input": "[1, 2, 3]\n3",
+        "expectedOutput": "2"
+      },
+      {
+        "input": "[1, 2, 3]\n4",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "[]\n5",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "[5]\n5",
+        "expectedOutput": "0"
+      },
+      {
+        "input": "[1, 2, 3, 4, 5]\n1",
+        "expectedOutput": "0"
+      }
+    ],
+    "hints": [
+      "Use a binary search approach to find the target",
+      "Divide the search space in half at each step"
+    ],
+    "optimalComplexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def binarySearch(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\nimport sys\narr = list(map(int, sys.stdin.readline().strip().split()))\ntarget = int(sys.stdin.readline().strip())\nprint(binarySearch(arr, target))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "517de961-614f-4347-9895-6bb55684685d"
+  },
+  {
+    "topic": "Searching",
+    "difficulty": "hard",
+    "title": "Rotated Binary Search",
+    "description": "Given a sorted array of integers that has been rotated an unknown number of times, find the index of a target value. If the target is not found, return -1. The array can be empty.",
+    "examples": [
+      {
+        "input": "arr = [4, 5, 6, 7, 0, 1, 2], target = 0",
+        "output": "4",
+        "explanation": "The target 0 is found at index 4"
+      },
+      {
+        "input": "arr = [4, 5, 6, 7, 0, 1, 2], target = 3",
+        "output": "-1",
+        "explanation": "The target 3 is not found in the array"
+      }
+    ],
+    "constraints": [
+      "1 <= arr.length <= 100",
+      "-100 <= arr[i] <= 100"
+    ],
+    "functionName": "rotatedBinarySearch",
+    "parameters": "arr, target",
+    "testCases": [
+      {
+        "input": "[4, 5, 6, 7, 0, 1, 2]\n0",
+        "expectedOutput": "4"
+      },
+      {
+        "input": "[4, 5, 6, 7, 0, 1, 2]\n3",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "[1]\n0",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "[1, 2, 3, 4, 5]\n1",
+        "expectedOutput": "0"
+      },
+      {
+        "input": "[5, 1, 2, 3, 4]\n1",
+        "expectedOutput": "1"
+      }
+    ],
+    "hints": [
+      "Use a modified binary search approach to find the target",
+      "Consider the rotation of the array when dividing the search space"
+    ],
+    "optimalComplexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def rotatedBinarySearch(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        if arr[left] <= arr[mid]:\n            if arr[left] <= target < arr[mid]:\n                right = mid - 1\n            else:\n                left = mid + 1\n        else:\n            if arr[mid] < target <= arr[right]:\n                left = mid + 1\n            else:\n                right = mid - 1\n    return -1\nimport sys\narr = list(map(int, sys.stdin.readline().strip().split()))\ntarget = int(sys.stdin.readline().strip())\nprint(rotatedBinarySearch(arr, target))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "2e810f7d-be00-46db-86f4-1a1d122a7f7a"
+  },
+  {
+    "topic": "Stacks & Queues",
+    "difficulty": "easy",
+    "title": "Valid Parentheses",
+    "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. The brackets must close in the correct order, \"()\" and \"()[]{}\" are all valid but \"(]\" and \"([)]\" are not.",
+    "examples": [
+      {
+        "input": "()",
+        "output": "true",
+        "explanation": "The brackets are correctly nested and closed in the correct order."
+      },
+      {
+        "input": "(]",
+        "output": "false",
+        "explanation": "The brackets are not correctly nested and closed in the correct order."
+      }
+    ],
+    "constraints": [
+      "The input string only contains the characters '(', ')', '{', '}', '[' and ']'.",
+      "1 <= input string length <= 10^4"
+    ],
+    "functionName": "isValid",
+    "parameters": "s",
+    "testCases": [
+      {
+        "input": "\"()\"\n",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "\"()[]{}\"\n",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "\"(]\"\n",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "\"([)]\"\n",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "\"{[]}\"\n",
+        "expectedOutput": "true"
+      }
+    ],
+    "hints": [
+      "Use a stack to keep track of the opening brackets.",
+      "When a closing bracket is encountered, check if the top of the stack contains the corresponding opening bracket."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "def isValid(s):\n    stack = []\n    mapping = {\")\": \"(\", \"}\": \"{\", \"]\": \"[\"}\n    for char in s:\n        if char in mapping.values():\n            stack.append(char)\n        elif char in mapping:\n            if not stack or mapping[char] != stack.pop():\n                return False\n    return not stack\nimport sys\ninput_str = sys.stdin.readline().strip()\nprint(isValid(input_str))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "bddd379b-96a4-4a10-8e81-b6de3dd8e122"
+  },
+  {
+    "topic": "Stacks & Queues",
+    "difficulty": "medium",
+    "title": "Daily Temperatures",
+    "description": "Given a list of daily temperatures, produce a list that, for each day, tells you how many days you would have to wait until a warmer temperature. If there is no future day with a warmer temperature, the answer is 0.",
+    "examples": [
+      {
+        "input": "[73, 74, 75, 71, 69, 72, 76, 73]",
+        "output": "[1, 1, 4, 2, 1, 1, 0, 0]",
+        "explanation": "For the first day, the next warmer temperature is on the second day. For the second day, the next warmer temperature is on the third day. For the third day, the next warmer temperature is on the seventh day. For the fourth day, the next warmer temperature is on the sixth day. For the fifth day, the next warmer temperature is on the sixth day. For the sixth day, the next warmer temperature is on the seventh day. For the seventh day, there is no future day with a warmer temperature. For the eighth day, there is no future day with a warmer temperature."
+      },
+      {
+        "input": "[89, 62, 70, 58, 59, 90, 75, 85, 73]",
+        "output": "[8, 1, 5, 4, 3, 0, 1, 0, 0]",
+        "explanation": "For the first day, the next warmer temperature is on the ninth day. For the second day, the next warmer temperature is on the third day. For the third day, the next warmer temperature is on the eighth day. For the fourth day, the next warmer temperature is on the fifth day. For the fifth day, the next warmer temperature is on the sixth day. For the sixth day, there is no future day with a warmer temperature. For the seventh day, the next warmer temperature is on the eighth day. For the eighth day, there is no future day with a warmer temperature. For the ninth day, there is no future day with a warmer temperature."
+      }
+    ],
+    "constraints": [
+      "The length of the input list is between 1 and 10^5.",
+      "The temperatures are between 30 and 100."
+    ],
+    "functionName": "dailyTemperatures",
+    "parameters": "temperatures",
+    "testCases": [
+      {
+        "input": "[73, 74, 75, 71, 69, 72, 76, 73]\n",
+        "expectedOutput": "[1, 1, 4, 2, 1, 1, 0, 0]"
+      },
+      {
+        "input": "[89, 62, 70, 58, 59, 90, 75, 85, 73]\n",
+        "expectedOutput": "[8, 1, 5, 4, 3, 0, 1, 0, 0]"
+      },
+      {
+        "input": "[28, 38, 45, 33, 32, 54, 56, 31, 42]\n",
+        "expectedOutput": "[1, 1, 5, 3, 2, 1, 0, 1, 0]"
+      },
+      {
+        "input": "[55, 42, 63, 52, 77, 87, 75, 61, 83]\n",
+        "expectedOutput": "[2, 1, 3, 3, 1, 0, 1, 1, 0]"
+      },
+      {
+        "input": "[32, 61, 42, 44, 73, 56, 75, 77, 74]\n",
+        "expectedOutput": "[1, 7, 1, 2, 1, 2, 1, 0, 0]"
+      }
+    ],
+    "hints": [
+      "Use a stack to keep track of the indices of the temperatures.",
+      "When a warmer temperature is encountered, pop the top of the stack and calculate the difference in days."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "solutionCode": "def dailyTemperatures(temperatures):\n    stack = []\n    result = [0] * len(temperatures)\n    for i, temp in enumerate(temperatures):\n        while stack and temperatures[stack[-1]] < temp:\n            idx = stack.pop()\n            result[idx] = i - idx\n        stack.append(i)\n    return result\nimport sys\ninput_list = list(map(int, sys.stdin.readline().strip()[1:-1].split(\", \" )))\nprint(dailyTemperatures(input_list))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "ace5204f-d3c7-4e9f-9598-3a6d2a73b324"
+  },
+  {
+    "topic": "Stacks & Queues",
+    "difficulty": "hard",
+    "title": "Trapping Rain Water",
+    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.",
+    "examples": [
+      {
+        "input": "[0,1,0,2,1,0,1,3,2,1,2,1]",
+        "output": "6",
+        "explanation": "The elevation map is represented as a series of bars with heights [0,1,0,2,1,0,1,3,2,1,2,1]. The water that can be trapped is 6 units."
+      },
+      {
+        "input": "[4,2,0,3,2,5]",
+        "output": "9",
+        "explanation": "The elevation map is represented as a series of bars with heights [4,2,0,3,2,5]. The water that can be trapped is 9 units."
+      }
+    ],
+    "constraints": [
+      "The length of the input list is between 1 and 10^5.",
+      "The heights of the bars are between 0 and 10^4."
+    ],
+    "functionName": "trap",
+    "parameters": "height",
+    "testCases": [
+      {
+        "input": "[0,1,0,2,1,0,1,3,2,1,2,1]\n",
+        "expectedOutput": "6"
+      },
+      {
+        "input": "[4,2,0,3,2,5]\n",
+        "expectedOutput": "9"
+      },
+      {
+        "input": "[5,2,3,6,3,4,1,2,5,3,4,6]\n",
+        "expectedOutput": "12"
+      },
+      {
+        "input": "[0,1,0,2,1,0,1,3,2,1,2,1,0,1,3]\n",
+        "expectedOutput": "11"
+      },
+      {
+        "input": "[2,0,2]\n",
+        "expectedOutput": "2"
+      }
+    ],
+    "hints": [
+      "Use two pointers to keep track of the maximum height of the bars on the left and right.",
+      "Calculate the minimum of the maximum heights on the left and right and subtract the height of the current bar to get the trapped water."
+    ],
+    "optimalComplexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "solutionCode": "def trap(height):\n    if not height:\n        return 0\n    left, right = 0, len(height) - 1\n    max_left, max_right = height[left], height[right]\n    total_water = 0\n    while left <= right:\n        max_left = max(max_left, height[left])\n        max_right = max(max_right, height[right])\n        if max_left < max_right:\n            total_water += max_left - height[left]\n            left += 1\n        else:\n            total_water += max_right - height[right]\n            right -= 1\n    return total_water\nimport sys\ninput_list = list(map(int, sys.stdin.readline().strip()[1:-1].split(\", \" )))\nprint(trap(input_list))",
+    "timeLimit": 30,
+    "isPreGenerated": true,
+    "problemId": "fcf9f044-310a-446b-808a-89b0f838db13"
+  }
+]
