@@ -29,6 +29,27 @@ AI-driven placement preparation platform with mock interviews, aptitude tests, g
 
 ---
 
+## 📸 App Preview & Screenshots
+
+### 📊 Dashboard & Analytics
+![Dashboard](screenshots/dashboard.png)
+
+### 🗣️ Group Discussion (GD) Simulator
+![GD Session](screenshots/gd_session.png)
+
+### 💼 Adaptive Mock Interview
+![Interview Session](screenshots/interview_session.png)
+
+### 🧠 Aptitude Practice & AI Challenge Mode
+![Aptitude Screen](screenshots/aptitude_screen.png)
+
+### 📄 Resume Upload & ATS Analysis Result
+| Uploading Resume | ATS Analysis Result |
+| :---: | :---: |
+| ![Resume Upload](screenshots/resume_upload.png) | ![Resume Analysis Result](screenshots/resume_analysis_result.png) |
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer | Technologies |
@@ -48,8 +69,8 @@ AI-driven placement preparation platform with mock interviews, aptitude tests, g
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/udaykumar0515/speakup.git
-cd speakup
+git clone https://github.com/P-Jaswanth-Reddy/Speakup.git
+cd Speakup
 
 # 2. Frontend
 cd frontend && npm install && npm run dev
