@@ -10,8 +10,6 @@ AI-driven placement preparation platform with mock interviews, aptitude tests, g
 
 | Hackathon | Achievement | Milestone |
 |-----------|-------------|-----------|
-| **Imagine Cup** | 🚀 Global Entry | Submitted to Worldwide Competition |
-| **Tech-Sprit** | 🎖️ Finalist | Top 20 Teams Selected |
 | **AI for Bharat** | ✅ Shortlisted | Advanced to Prototype Round |
 
 ---
